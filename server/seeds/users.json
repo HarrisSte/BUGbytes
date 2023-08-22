@@ -1,14 +1,38 @@
 [
   {
-    "firstName": "Steve",
-    "lastName": "Rogers",
-    "email": "captainamerica@example.com",
-    "password": "passwords1"
+    "firstName": "Michael",
+    "lastName": "Scott",
+    "email": "thatswhatshesaid@example.com",
+    "password": "threatlevelmidnight1"
   },
   {
-    "firstName": "Carol",
-    "lastName": "Danvers",
-    "email": "captainmarvel@example.com",
-    "password": "passwords1"
+    "firstName": "Dwight",
+    "lastName": "Schrute",
+    "email": "beets@example.com",
+    "password": "bearsbeets1"
+  },
+  {
+    "firstName": "Jim",
+    "lastName": "Halpert",
+    "email": "bigtuna@example.com",
+    "password": "quaddesk1"
+  },
+  {
+    "firstName": "Pam",
+    "lastName": "Beesly",
+    "email": "godinthischilis@example.com",
+    "password": "pamela1"
+  },
+  {
+    "firstName": "Arthur",
+    "lastName": "Morgan",
+    "email": "unshaken@example.com",
+    "password": "hereshopin1"
+  },
+  {
+    "firstName": "Dutch Van",
+    "lastName": "Der Linde",
+    "email": "ihaveaplan@example.com",
+    "password": "tahiti1"
   }
 ]
