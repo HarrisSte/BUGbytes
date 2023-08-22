@@ -31,7 +31,7 @@ export default function Registration() {
       });
       const { token, user } = mutationResponse.data.register;
       loginUser(user, token);
-      navigate('/dashboard');
+      navigate('/profile');
     } catch (e) {
     // eslint-disable-next-line no-console
       console.log(e);
@@ -75,7 +75,7 @@ export default function Registration() {
         <label htmlFor="email">
           Email:
           <input
-            placeholder="youremail@test.com"
+            placeholder="Enter your email address"
             name="email"
             type="email"
             value={formState.email}
@@ -96,9 +96,9 @@ export default function Registration() {
           Sign Up
         </button>
         <p>
-          Already have an account? Login
+          Already have an account? Log In
           {' '}
-          <Link to="/register">here</Link>
+          <Link to="/login">here</Link>
         </p>
       </form>
     </>

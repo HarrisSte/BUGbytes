@@ -12,8 +12,8 @@ import { CurrentUserProvider } from "./context";
 
 import App from "./App";
 import Error from "./pages/Error";
-import Landing from "./pages/Landing";
-import Dashboard from "./pages/Dashboard";
+import Homepage from "./pages/Homepage";
+import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -22,14 +22,14 @@ import ProtectedRoute from "./components/ProtectedRoute";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<Error />}>
-      <Route index element={<Landing />} />
+      <Route index element={<Homepage />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route
-        path="dashboard"
+        path="profile"
         element={
           <ProtectedRoute>
-            <Dashboard />
+            <Profile />
           </ProtectedRoute>
         }
       />

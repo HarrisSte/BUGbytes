@@ -27,7 +27,7 @@ export default function Login() {
       });
       const { token, user } = mutationResponse.data.login;
       loginUser(user, token);
-      navigate('/dashboard');
+      navigate('/profile');
     } catch (e) {
       console.log(e);
     }
@@ -46,11 +46,11 @@ export default function Login() {
         </div>
       ) : null}
       <form id="login-form" onSubmit={handleFormSubmit}>
-        <h2>Login</h2>
+        <h2>Log In</h2>
         <label htmlFor="email">
           Email:
           <input
-            placeholder="youremail@test.com"
+            placeholder="Enter your email address"
             name="email"
             type="email"
             value={formState.email}
@@ -68,10 +68,10 @@ export default function Login() {
           />
         </label>
         <button type="submit">
-          Login
+          Log In
         </button>
         <p>
-          Need an account? Sign up
+          Need an account? Sign Up
           {' '}
           <Link to="/register">here</Link>
         </p>

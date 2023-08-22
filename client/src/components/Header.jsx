@@ -8,12 +8,12 @@ import { useCurrentUserContext } from '../context/CurrentUser';
     <nav>
       {isLoggedIn() ? (
         <>
-          <Link to="/dashboard">Dashboard</Link>
-          <button type="button" onClick={logoutUser}>Logout</button>
+          <Link to="/profile">Profile</Link>
+          <button type="button" onClick={logoutUser}>Log Out</button>
         </>
       ) : (
         <>
-          <Link to="/login">Login</Link>
+          <Link to="/login">Log In</Link>
           <Link to="/register">Sign Up</Link>
         </>
       )}
