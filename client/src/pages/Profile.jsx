@@ -1,7 +1,7 @@
-function Dashboard() {
+function Profile() {
   return (
-    <h1 className="page-title">Dashboard</h1>
+    <h1 className="page-title">Profile</h1>
   )
 }
 
-export default Dashboard
+export default Profile
