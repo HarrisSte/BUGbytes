@@ -16,6 +16,7 @@ import Homepage from "./pages/Homepage";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import GamesPage from './pages/GamesPage';
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route index element={<Homepage />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="gamespage" element={< GamesPage />} />
       <Route
         path="profile"
         element={
