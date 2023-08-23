@@ -1,14 +1,21 @@
 'use client';
 
-import { Card } from 'flowbite-react';
-import Image from '../assets/sony-buttons-logo.png';
+import React from 'react'; // Import React
+import { Card } from 'flowbite-react'; // Import Card component from flowbite-react
+import Image from '../assets/sony-buttons-logo.png'; // Import the image
 
 export default function SonyHomepageCard() {
   return (
-    <Card renderImage={() => {<Image width={1000} height={1000} src="../assets/sony-buttons-logo.png" />}}>
-      <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-      Sony
+    <Card>
+      <img
+        width={500}
+        height={500}
+        src={Image}
+        alt='Sony Logo'
+      />
+      <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+        Sony
       </h1>
     </Card>
-  )
+  );
 }
