@@ -4,7 +4,6 @@ import logo from "./../assets/sony-buttons-logo.png";
 import { HiSun, HiMoon, HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import React, { useState } from "react";
 
-
 function Header() {
   const [toggle, setToggle] = useState(true);
   const { isLoggedIn, logoutUser } = useCurrentUserContext();

@@ -11,18 +11,18 @@ export default function Login() {
   const navigate = useNavigate();
   const [formState, setFormState] = useState({
     email: '',
-    password: ''
+    password: '',
   });
 
   const [login, { error }] = useMutation(LOGIN_USER);
 
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       const mutationResponse = await login({
         variables: {
           email: formState.email,
-          password: formState.password
+          password: formState.password,
         },
       });
       const { token, user } = mutationResponse.data.login;
@@ -33,7 +33,7 @@ export default function Login() {
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({ ...formState, [name]: value });
   };
@@ -42,38 +42,34 @@ export default function Login() {
     <>
       {error ? (
         <div>
-          <p className="error-text">The provided credentials are incorrect</p>
+          <p className='error-text'>The provided credentials are incorrect</p>
         </div>
       ) : null}
-      <form id="login-form" onSubmit={handleFormSubmit}>
+      <form id='login-form' onSubmit={handleFormSubmit}>
         <h2>Log In</h2>
-        <label htmlFor="email">
+        <label htmlFor='email'>
           Email:
           <input
-            placeholder="Enter your email address"
-            name="email"
-            type="email"
+            placeholder='Enter your email address'
+            name='email'
+            type='email'
             value={formState.email}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor='password'>
           Password
           <input
-            placeholder="******"
-            name="password"
-            type="password"
+            placeholder='******'
+            name='password'
+            type='password'
             value={formState.password}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">
-          Log In
-        </button>
+        <button type='submit'>Log In</button>
         <p>
-          Need an account? Sign Up
-          {' '}
-          <Link to="/register">here</Link>
+          Need an account? Sign Up <Link to='/register'>here</Link>
         </p>
       </form>
     </>
