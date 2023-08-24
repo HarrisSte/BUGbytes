@@ -1,4 +1,4 @@
-import SonyHomepageCard from '../components/SonyHomepageCard'
+import SonyHomepageCard from '../components/SonyHomepageCard';
 
 function Homepage() {
   return (
@@ -6,7 +6,7 @@ function Homepage() {
       <h1 className='page-title'>Welcome to BUGbytes!</h1>
       <SonyHomepageCard />
     </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

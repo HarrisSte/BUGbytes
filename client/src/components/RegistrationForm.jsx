@@ -13,12 +13,12 @@ export default function Registration() {
     firstName: '',
     lastName: '',
     email: '',
-    password: ''
+    password: '',
   });
 
   const [register, { error }] = useMutation(REGISTER_USER);
 
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
       const mutationResponse = await register({
@@ -33,12 +33,12 @@ export default function Registration() {
       loginUser(user, token);
       navigate('/profile');
     } catch (e) {
-    // eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console
       console.log(e);
     }
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({ ...formState, [name]: value });
   };
@@ -47,58 +47,54 @@ export default function Registration() {
     <>
       {error ? (
         <div>
-          <p className="error-text">The provided credentials are incorrect</p>
+          <p className='error-text'>The provided credentials are incorrect</p>
         </div>
       ) : null}
-      <form id="registration-form" onSubmit={handleFormSubmit}>
+      <form id='registration-form' onSubmit={handleFormSubmit}>
         <h2>Register</h2>
-        <label htmlFor="firstName">
+        <label htmlFor='firstName'>
           First name:
           <input
-            type="text"
-            id="firstName"
-            name="firstName"
+            type='text'
+            id='firstName'
+            name='firstName'
             value={formState.firstName}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="lastName">
+        <label htmlFor='lastName'>
           Last name:
           <input
-            type="text"
-            id="lastName"
-            name="lastName"
+            type='text'
+            id='lastName'
+            name='lastName'
             value={formState.lastName}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="email">
+        <label htmlFor='email'>
           Email:
           <input
-            placeholder="Enter your email address"
-            name="email"
-            type="email"
+            placeholder='Enter your email address'
+            name='email'
+            type='email'
             value={formState.email}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor='password'>
           Password
           <input
-            placeholder="******"
-            name="password"
-            type="password"
+            placeholder='******'
+            name='password'
+            type='password'
             value={formState.password}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">
-          Sign Up
-        </button>
+        <button type='submit'>Sign Up</button>
         <p>
-          Already have an account? Log In
-          {' '}
-          <Link to="/login">here</Link>
+          Already have an account? Log In <Link to='/login'>here</Link>
         </p>
       </form>
     </>
