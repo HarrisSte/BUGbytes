@@ -1,5 +1,7 @@
 'use client';
 
+
+
 import { Card } from 'flowbite-react'; // Import Card component from flowbite-react
 import Image from '../assets/sony-buttons-logo.png'; // Import the image
 

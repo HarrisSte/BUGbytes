@@ -11,6 +11,7 @@ import { useCookies } from "react-cookie";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Flowbite } from "flowbite-react";
 
 function App() {
   const [cookies] = useCookies(["auth_token"]);
@@ -32,6 +33,8 @@ function App() {
   });
 
   return (
+    <div className='dark: bg-black'>
+    <Flowbite>
     <ApolloProvider client={client}>
       <Header />
       <main>
@@ -39,6 +42,8 @@ function App() {
       </main>
       <Footer />
     </ApolloProvider>
+      </Flowbite>
+      </div>
   );
 }
 

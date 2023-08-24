@@ -50,7 +50,7 @@ export default function Registration() {
           <p className="error-text">The provided credentials are incorrect</p>
         </div>
       ) : null}
-      <form id="registration-form" onSubmit={handleFormSubmit}>
+      <form id="registration-form dark:text-white" onSubmit={handleFormSubmit}>
         <h2>Register</h2>
         <label htmlFor="firstName">
           First name:

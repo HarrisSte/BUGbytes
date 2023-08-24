@@ -45,7 +45,7 @@ export default function Login() {
           <p className="error-text">The provided credentials are incorrect</p>
         </div>
       ) : null}
-      <form id="login-form" onSubmit={handleFormSubmit}>
+      <form id="login-form dark:text-white" onSubmit={handleFormSubmit}>
         <h2>Log In</h2>
         <label htmlFor="email">
           Email:

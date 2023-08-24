@@ -3,7 +3,7 @@ import { useCurrentUserContext } from "../context/CurrentUser";
 import logo from "./../assets/sony-buttons-logo.png";
 import { HiSun, HiMoon, HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import React, { useState } from "react";
-
+// import { DarkThemeToggle } from 'flowbite-react'
 
 function Header() {
   const [toggle, setToggle] = useState(true);
@@ -22,6 +22,7 @@ function Header() {
         />
       </div>
       <div>
+        {/* <DarkThemeToggle /> */}
         {toggle ? (
           <HiMoon
             size={38}
@@ -36,7 +37,7 @@ function Header() {
           />
         )}
       </div>
-      <div className="flex pl-5 font-bold ">
+      <div className="flex pl-5 font-bold dark:text-white">
         {isLoggedIn() ? (
           <>
             <Link to="/profile">Profile</Link>
