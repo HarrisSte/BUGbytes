@@ -1,4 +1,4 @@
-import SonyHomepageCard from '../components/SonyHomepageCard';
+import SonyHomepageCard from '../components/sonyPage/SonyHomepageCard';
 
 function Homepage() {
   return (
