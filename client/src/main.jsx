@@ -10,12 +10,13 @@ import { CookiesProvider } from 'react-cookie';
 
 import { CurrentUserProvider } from './context';
 
-import App from './App';
-import Error from './pages/Error';
-import Homepage from './pages/Homepage';
-import Profile from './pages/Profile';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import App from "./App";
+import Error from "./pages/Error";
+import Homepage from "./pages/Homepage";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import SingleGame from './pages/SingleGame';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -23,8 +24,11 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />} errorElement={<Error />}>
       <Route index element={<Homepage />} />
-      <Route path='login' element={<Login />} />
-      <Route path='register' element={<Register />} />
+
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      <Route path="singlegame" element={< SingleGame />} />
+
       <Route
         path='profile'
         element={
