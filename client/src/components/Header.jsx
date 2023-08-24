@@ -3,7 +3,6 @@ import { useCurrentUserContext } from "../context/CurrentUser";
 import logo from "./../assets/sony-buttons-logo.png";
 import { HiSun, HiMoon, HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import React, { useState } from "react";
-// import { DarkThemeToggle } from 'flowbite-react'
 
 function Header() {
   const [toggle, setToggle] = useState(true);
