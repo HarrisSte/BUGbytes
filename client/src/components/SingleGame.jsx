@@ -1,6 +1,6 @@
 import { Card } from 'flowbite-react';
 
-export default function DefaultCard() {
+export default function singleGame() {
   return (
     <Card className='max-w-sm' href='#'>
       <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
