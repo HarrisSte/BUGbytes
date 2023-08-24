@@ -1,5 +1,5 @@
 import { Card, Button } from 'flowbite-react';
-import Image from '../assets/sony-buttons-logo.png';
+// import Image from '../assets/sony-buttons-logo.png';
 
 export default function SonyHomepageCard() {
   return (
