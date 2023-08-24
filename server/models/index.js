@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-const thoughtRoutes = require("./thoughtRoutes");
+const gameRoutes = require("./gameRoutes");
+const bugRoutes = require("./bugRoutes");
 
-router.use("/users", userRoutes);
-router.use("/thoughts", thoughtRoutes);
+router.use("/bugs", bugRoutes);
+router.use("/games", gameRoutes);
+router.use("/users", userRoutes)
 
 module.exports = router;
