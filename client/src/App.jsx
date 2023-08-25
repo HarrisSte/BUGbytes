@@ -32,6 +32,7 @@ function App() {
   });
 
   return (
+    <div className='dark'>
     <ApolloProvider client={client}>
       <Header />
 
@@ -39,7 +40,8 @@ function App() {
         <Outlet />
       </main>
       <Footer />
-    </ApolloProvider>
+      </ApolloProvider>
+      </div>
   );
 }
 
