@@ -1,14 +1,20 @@
-import { Avatar } from 'flowbite-react';
+// import React from 'react';
+import ListGroupWithButtons from '../components/Profile/playLater';
+import ImageComponent from '../components/Profile/profileImg';
+import TopFiveList from '../components/Profile/topFive';
 
-export default function DefaultAvatar() {
+export default function CombinedPage() {
   return (
-    <div className='flex flex-wrap gap-2'>
-      <Avatar
-        alt='avatar of Jese'
-        img='/images/people/profile-picture-5.jpg'
-        rounded
-      />
-      <Avatar img='../assets/profileImg.jpg' />
+    <div className='flex flex-column'>
+      <div className='w-1/2 p-6'>
+        <ImageComponent />
+      </div>
+      <div className='w-1/2 p-6'>
+        <ListGroupWithButtons />
+      </div>
+      <div className='w-1/2 p-4'>
+        <TopFiveList />
+      </div>
     </div>
   );
 }

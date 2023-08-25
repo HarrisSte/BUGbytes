@@ -34,11 +34,12 @@ nav>button {
 
 main {
   flex-grow: 1;
+  background-color:#393e41;
 }
 
 footer {
-  height: 50px;
-  background-color: lightgray;
+  height: 60px;
+  background-color: #264653;
   display: flex;
   justify-content: center;
   align-items: center;
