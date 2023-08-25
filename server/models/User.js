@@ -1,4 +1,3 @@
-/* eslint-disable func-names */
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcryptjs');
 
@@ -17,13 +16,19 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    match: [/.+@.+\..+/, 'Must match an email address!'],
+    match: [/.+@.+\..+/, "Must match an email address!"],
   },
   password: {
     type: String,
     required: true,
     minlength: 5,
   },
+  // bugs: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: "Bug",
+  //   },
+  // ],
 });
 
 userSchema.pre('save', async function (next) {
