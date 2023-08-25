@@ -1,4 +1,4 @@
-// import SingleGame from '../components/SingleGame';
+import SingleGame from '../components/SingleGame';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +36,7 @@ const Homepage = () => {
           ))
         }
       </ul>
-      {/* <SingleGame /> */}
+      <SingleGame />
     </div>
   );
 }
