@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-var gameSchema = new Schema({
+let gameSchema = new Schema({
   title: String,
   genre: {
     type: Schema.ObjectId,
