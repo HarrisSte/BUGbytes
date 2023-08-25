@@ -17,6 +17,8 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SingleGame from './pages/SingleGame';
+import './index.css';
+
 
 import ProtectedRoute from './components/ProtectedRoute';
 

@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   min-height: 100vh;
@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
 /* 
 nav {
   height: 50px;
@@ -31,11 +31,11 @@ nav>button {
   margin-left: 1rem;
   text-decoration: none;
 } */
-
+/* 
 main {
   flex-grow: 1;
   width: 100%;
-}
+} */
 
 /* footer {
   height: 50px;
@@ -47,7 +47,7 @@ main {
   text-align: center;
 } */
 
-input {
+/* input {
   width: 100%;
   padding: 0.25rem;
 }
@@ -79,4 +79,4 @@ button {
 
 .page-title {
   text-align: center;
-}
+} */

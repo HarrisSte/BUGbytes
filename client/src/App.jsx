@@ -11,6 +11,7 @@ import { useCookies } from 'react-cookie';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import './index.css';
 
 function App() {
   const [cookies] = useCookies(['auth_token']);
