@@ -32,7 +32,7 @@ function App() {
   });
 
   return (
-    <div className='dark'>
+    <div>
       <ApolloProvider client={client}>
         <Header />
         <main>
