@@ -8,6 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -32,7 +33,6 @@ function App() {
   });
 
   return (
-    <div>
       <ApolloProvider client={client}>
         <Header />
         <main>
@@ -40,7 +40,6 @@ function App() {
         </main>
         <Footer />
       </ApolloProvider>
-    </div>
   );
 }
 
