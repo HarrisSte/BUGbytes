@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCurrentUserContext } from "../context/CurrentUser";
 import logo from "./../assets/sony-buttons-logo.png";
-
-// import { HiSun, HiMoon, HiOutlineMagnifyingGlass } from "react-icons/hi2";
-// import React, { useState } from "react";
+import Search from './Search';
 
 
 
@@ -13,6 +11,7 @@ function Header() {
   return (
     <div>
       <img src={logo} width={60} height={60} />
+      <Search />
       <div>
         {isLoggedIn() ? (
           <>
