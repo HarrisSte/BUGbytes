@@ -5,14 +5,14 @@ import TopFiveList from '../components/Profile/topFive';
 
 export default function CombinedPage() {
   return (
-    <div className='flex flex-column'>
-      <div className='w-1/2 p-6'>
+    <div>
+      <div>
         <ImageComponent />
       </div>
-      <div className='w-1/2 p-6'>
+      <div>
         <ListGroupWithButtons />
       </div>
-      <div className='w-1/2 p-4'>
+      <div>
         <TopFiveList />
       </div>
     </div>

@@ -1,27 +1,20 @@
-import { ListGroup } from 'flowbite-react';
-import './playLater.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-export default function ListGroupWithButtons() {
+function BasicExample() {
   return (
-    <ListGroup>
-      <ListGroup.Item active onClick={() => alert('Profile clicked!')}>
-        <p className='custom-item'>Games I Wanna Play Later</p>
-      </ListGroup.Item>
-      <ListGroup.Item>
-        <p className='gameList'>Game One</p>
-      </ListGroup.Item>
-      <ListGroup.Item>
-        <p className='gameList'>Game Two</p>
-      </ListGroup.Item>
-      <ListGroup.Item>
-        <p className='gameList'>Game Three</p>
-      </ListGroup.Item>
-      <ListGroup.Item>
-        <p className='gameList'>Game Four</p>
-      </ListGroup.Item>
-      <ListGroup.Item>
-        <p className='gameList'>Game Five</p>
-      </ListGroup.Item>
-    </ListGroup>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant='top' src='holder.js/100px180' />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant='primary'>Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 }
+
+export default BasicExample;
