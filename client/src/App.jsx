@@ -33,15 +33,14 @@ function App() {
 
   return (
     <div className='dark'>
-    <ApolloProvider client={client}>
-      <Header />
-
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+      <ApolloProvider client={client}>
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
       </ApolloProvider>
-      </div>
+    </div>
   );
 }
 
