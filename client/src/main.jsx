@@ -33,7 +33,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path='/search' element={<Search />} />
-      <Route path="/singlegame" element={<SingleGame />} />
+      <Route path="singlegame" element={<SingleGame />} />
 
       <Route
         path='profile'
