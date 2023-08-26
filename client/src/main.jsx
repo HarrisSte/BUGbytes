@@ -21,6 +21,7 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import SingleGame from './pages/SingleGame';
+import Search from './components/Search';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
 
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path='/search' element={<Search />} />
       <Route path="singlegame" element={<SingleGame />} />
 
       <Route
