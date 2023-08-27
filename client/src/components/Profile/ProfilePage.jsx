@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -10,51 +11,67 @@ import svenImage from '../../assets/sven.jpg';
 import './profileStyle.css';
 
 function ProfilePage() {
-  const playLaterCards = [
+  const [playLaterCards, setPlayLaterCards] = useState([
     {
       title: 'PLAY LATER CARD 1',
-      text: 'Some quick example text for the first card.',
+      text: 'Some quick example text for the 1st card.',
+      imageSrc: '',
     },
     {
       title: 'PLAY LATER CARD 2',
-      text: 'Some quick example text for the second card.',
+      text: 'Some quick example text for the 2nd card.',
+      imageSrc: '',
     },
     {
       title: 'PLAY LATER CARD 3',
-      text: 'Some quick example text for the third card.',
+      text: 'Some quick example text for the 3rd card.',
+      imageSrc: '',
     },
     {
       title: 'PLAY LATER CARD 4',
-      text: 'Some quick example text for the fourth card.',
+      text: 'Some quick example text for the 4th card.',
+      imageSrc: '',
     },
     {
       title: 'PLAY LATER CARD 5',
-      text: 'Some quick example text for the fifth card.',
+      text: 'Some quick example text for the 5th card.',
+      imageSrc: '',
     },
-  ];
+    {
+      title: 'PLAY LATER CARD 6',
+      text: 'Some quick example text for the 6th card.',
+      imageSrc: '',
+    },
+  ]);
+
+  // function updateCardInfo(index, newTitle, newText) {
+  //   const updatedCards = [...playLaterCards];
+  //   updatedCards[index].title = newTitle;
+  //   updatedCards[index].text = newText;
+  //   setPlayLaterCards(updatedCards);
+  // }
 
   return (
     <Container>
       <Row>
-        <Col md={5} >
-          <Image src={svenImage} className='profile-image' />
+        <Col md={3}>
           <div>
+            <Image src={svenImage} className='profile-image' />
             <h1>WELCOME</h1>
           </div>
         </Col>
-        <Col xs={12} md={4} className='top-five-list'>
+        <Col md={8} className='top-five-list'>
           <ListGroup as='ul'>
-            <ListGroup.Item as='li' active>
-              <h1>My Top Five Games</h1>
-            </ListGroup.Item>
-            <ListGroup.Item as='li'>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item as='li'>Morbi leo risus</ListGroup.Item>
-            <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
+            <h1>My Top Five Games</h1>
+            <ListGroup>
+              <ListGroup.Item>Cras justo odio</ListGroup.Item>
+              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            </ListGroup>
           </ListGroup>
         </Col>
-        
       </Row>
       <Row>
         {playLaterCards.map((card, index) => (
@@ -64,7 +81,9 @@ function ProfilePage() {
               <Card.Body>
                 <Card.Title>{card.title}</Card.Title>
                 <Card.Text>{card.text}</Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
+                <Button size='lg' variant='outline-danger'>
+                  Check out the game!
+                </Button>{' '}
               </Card.Body>
             </Card>
           </Col>

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCurrentUserContext } from "../context/CurrentUser";
-import logo from "./../assets/sony-buttons-logo.png";
+import logo from "./../assets/BUGbytes-black.png";
 import Search from './Search';
-
-
 
 function Header() {
   const { isLoggedIn, logoutUser } = useCurrentUserContext();

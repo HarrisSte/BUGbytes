@@ -35,12 +35,12 @@ nav>button {
 
 main {
   flex-grow: 1;
-  background: #393e41;
+  background: url('../src/assets/BBBackground.png') center/cover no-repeat;
 }
 
 footer {
-  height: 60px;
-  background-color: #264653;
+  height: 80px;
+  background-color: #40916c;
   display: flex;
   justify-content: center;
   align-items: center;
