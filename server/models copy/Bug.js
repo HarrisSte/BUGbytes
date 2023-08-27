@@ -1,15 +1,16 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
+const commentSchema = require("./Comment");
 
 const bugSchema = new Schema({
-  bugText: {
+  text: {
     type: String,
     required: 'You need to leave a bug!',
     minlength: 1,
     maxlength: 280,
     trim: true,
   },
-  bugAuthor: {
+  author: {
     type: String,
     required: true,
     trim: true,
@@ -19,25 +20,11 @@ const bugSchema = new Schema({
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  comments: [
-    {
-      commentText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-      },
-      commentAuthor: {
-        type: String,
-        required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-    },
-  ],
+  comments: [commentSchema],
+});
+
+bugSchema.virtual("bugCount").get(function () {
+  return this.comments.length;
 });
 
 const bug = model('bug', bugSchema);
