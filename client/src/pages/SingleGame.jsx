@@ -1,19 +1,21 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GameDetail from '../components/GameDetails';
 
 const SingleGame = () => {
 
+    const {gameId} = useParams()
+
     useEffect(() => {
-        fetchGames()
+        fetchGame()
       }, []);
     
-      const [games, setGames] = useState([]);
+      const [game, setGame] = useState([]);
     
-      const fetchGames = () => {
-        fetch('https://api.rawg.io/api/games/{id}?key=bf22dc51e531456db8bc42a19dac9897')
+      const fetchGame = async () => {
+        await fetch(`https://api.rawg.io/api/games/${gameId}?key=bf22dc51e531456db8bc42a19dac9897`)
         .then(resp => resp.json())
-        .then(({results}) => setGames(results))
+        .then(results => setGame(results))
       }
 
     return (
@@ -29,12 +31,8 @@ const SingleGame = () => {
                 <button type='button'>Save to Collection</button>
             </div>
 
-            <h1 className='parent-company'>{games.name}</h1>
-            <div className='game-media'>
-                <img src='../assets/sony-buttons-logo.png'/>
-            </div>
             <div className='game-info'>
-                <GameDetail />
+                <GameDetail game={game}/>
             </div>
         </div>
     )
