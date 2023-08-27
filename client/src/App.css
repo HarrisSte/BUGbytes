@@ -13,6 +13,13 @@ body {
   min-height: 100vh;
 }
 
+.search-input {
+  width: 500px;
+  margin-left: 10rem;
+  height: 30px;
+  font-size: 14px;
+}
+
 /* 
 nav {
   height: 50px;
@@ -53,6 +60,20 @@ input {
   padding: 0.25rem;
 }
 
+.game-search {
+ width: 100%;
+}
+
+.submit-button {
+  background-color: #40916c;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #F0C879ff;
+  box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
+}
+
 button {
   display: inline-block;
   font-weight: 400;
@@ -64,7 +85,7 @@ button {
   line-height: 1.5;
   border-radius: .25rem;
   color: #fff;
-  background-color: #007bff;
+  background-color: #F0C879ff;
 }
 
 #login-form,
