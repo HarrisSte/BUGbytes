@@ -1,20 +1,20 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-function BasicExample() {
+function ProfileTopFiveList() {
   return (
-    <Card>
-      <Card.Img variant='top' src='holder.js/100px180' />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant='primary'>Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <ListGroup as='ul'>
+      <ListGroup.Item as='li' active>
+        My Top Five Games
+      </ListGroup.Item>
+      <ListGroup.Item as='li'>Dapibus ac facilisis in</ListGroup.Item>
+      <ListGroup.Item as='li' disabled>
+        Morbi leo risus
+      </ListGroup.Item>
+      <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
+      <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
+      <ListGroup.Item as='li'>Porta ac consectetur ac</ListGroup.Item>
+    </ListGroup>
   );
 }
 
-export default BasicExample;
+export default ProfileTopFiveList;
