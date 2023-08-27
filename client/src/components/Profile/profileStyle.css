@@ -2,6 +2,37 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.top-five-list {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.play-later-card {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+
+}
+
+
+@media (max-width: 768px) {
+    .profile-image {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .top-five-list {
+        padding-top: 2rem;
+    }
+
+    .play-later-card {
+        margin-bottom: 1rem;
+
+    }
+}
 }
