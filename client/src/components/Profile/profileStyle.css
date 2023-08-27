@@ -7,9 +7,19 @@
 }
 
 .top-five-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 4rem;
     padding-bottom: 2rem;
     font-family: 'Poppins', sans-serif;
+}
+
+.top-five-list h1 {
+    background-color: #D4655Aff;
+    color: #F8B44Eff;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .play-later-card {
@@ -18,12 +28,10 @@
 
 }
 
-
 @media (max-width: 768px) {
     .profile-image {
         margin-top: 1rem;
         margin-bottom: 1rem;
-
     }
 
     .top-five-list {
@@ -32,7 +40,5 @@
 
     .play-later-card {
         margin-bottom: 1rem;
-
     }
-}
 }
