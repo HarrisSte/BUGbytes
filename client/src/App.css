@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 
 .search-input {
@@ -19,6 +20,7 @@ body {
   height: 30px;
   font-size: 14px;
 }
+
 
 /* 
 nav {
