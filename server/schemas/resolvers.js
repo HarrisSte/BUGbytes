@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Game } = require('../models');
 const { signToken, AuthenticationError } = require('../utils');
 
 const resolvers = {
@@ -28,6 +28,30 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, currentUser: user };
+    },
+    saveGame: async (parent, { gameInput }, context) => {
+      if (context.user) {
+        const game = await Game.findByIdAndUpdate(
+          context.user._id,
+          { $push: { savedGames: gameInput } },
+          { new: true }
+        );
+        return game;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+    removeGame: async (parent, { gameId }, context) => {
+      if (context.user) {
+        const game = await Game.findByIdAndUpdate(
+          context.user._id,
+          { $pull: { savedGames: gameId } },
+          { new: true }
+        );
+
+        return game;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };

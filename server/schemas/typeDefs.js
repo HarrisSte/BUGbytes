@@ -5,6 +5,9 @@ const typeDefs = `#graphql
     lastName: String
     email: String
     password: String
+    savedGames: [Game]
+    bugs: [Bug]
+    comments: [Comment]
   }
 
   type Bug {
@@ -12,7 +15,15 @@ const typeDefs = `#graphql
     bugText: String
     bugAuthor: String
     createdAt: String
-    comments: String
+    comments: [Comment]
+  }
+
+  type Comment {
+  commentId: ID
+  commentBody: String
+  username: String
+  createdAt: String
+
   }
 
   type Game {
@@ -26,12 +37,18 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    currentUser(email: String!): User
+      currentUser(email: String!): User
   }
 
+  input GameInput {
+    title: String
+  }
+  
   type Mutation {
     register(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    saveGame(gameInput: GameInput): User
+    removeGame(gameId: ID!): User
   }
 `;
 

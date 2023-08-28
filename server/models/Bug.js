@@ -18,7 +18,7 @@ const bugSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+    get: (date) => date.toLocaleDateString(),
   },
   comments: [commentSchema],
 });

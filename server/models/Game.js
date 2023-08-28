@@ -5,6 +5,15 @@ const gameSchema = new Schema({
     type: Number,
     required: true
   },
+  //Saved book id
+  gameId: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+  },
+  
   bugs: [{
     type: Schema.Types.ObjectId,
     ref: "bug",
