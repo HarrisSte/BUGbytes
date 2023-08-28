@@ -64,7 +64,7 @@ const GenreList = () => {
               className="btn btn-light"
               style={{
                 width: "100%",
-                backgroundImage: `url(${genre.image_background})`,
+                backgroundColor: "#2485C3",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 borderRadius: "15px",

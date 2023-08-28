@@ -56,7 +56,7 @@ const GameList = () => {
               className="btn btn-light"
               style={{
                 width: "100%",
-                backgroundImage: `url(${gamesData[0].background_image})`,
+                backgroundColor: "#2485C3",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 borderRadius: "15px",
@@ -117,7 +117,7 @@ const GameList = () => {
               className="btn btn-light"
               style={{
                 width: "100%",
-                backgroundImage: `url(${game.background_image})`,
+                backgroundColor: "#2485C3",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 borderRadius: "15px",
