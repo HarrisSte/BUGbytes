@@ -6,7 +6,6 @@ const Game = require("./Game");
 
 module.exports = {
   User,
-  Comment,
   Game,
   Bug,
 };
