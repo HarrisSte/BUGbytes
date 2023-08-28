@@ -1,14 +1,13 @@
 :root {
     --header-bg-color: rgb(46, 42, 42);
     --logout-text: black;
-    --logout-background: #14fff7;
-    --header-hover: #ffafcc;
+    /* --logout-background: #14fff7; */
+    --logout-background: #F8B44Eff;
     /* --header-hover: #80ed99; */
-    /* --header-hover-og: #F0C879ff; */
+    --header-hover-og: #F0C879ff;
 }
 
 .header {
-    /* background-color: var(--header-bg-color); */
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(69,69,73,1) 50%, rgba(0,0,0,1) 100%);
 }
@@ -24,57 +23,51 @@
 .search-buttons {
     display: inline;
 }
-
+/* 
 .header-buttons {
-    display: inline;
-}
+    display: flex;
+} */
 
 .profile {
     background-color: var(--logout-background);
-    color: var(--logout-text);
-    padding: .65rem;
     border-radius: .2rem;
-    margin: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
 
 .profile:hover {
     background-color: var(--header-hover);
-    /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
-    box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
-    /* box-shadow: 0 0 10px 5px rgba(69, 255, 159, 0.5); */
+    box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
     text-decoration: none;
-    color: var(--logout-text);
+    
 }
 
 .log-out {
-    color: var(--logout-text);
     background-color: var(--logout-background);
-    font-weight: bolder;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
 }
 
 .log-out:hover {
     background-color: var(--header-hover);
-    /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
-    box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
+    box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
 }
-
+/* 
 .header-login-buttons {
     display: inline;
-}
+} */
 
 .log-in {
     display: inline;
     color: var(--logout-text);
     background-color: var(--logout-background);
     font-weight: bolder;
-    padding: .65rem;
     border-radius: .2rem;
     margin: 1rem;
 }
 
 .log-in:hover {
     background-color: var(--header-hover);
-    /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
     box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
     text-decoration: none;
     color: var(--logout-text);
@@ -84,14 +77,12 @@
     color: var(--logout-text);
     background-color: var(--logout-background);
     font-weight: bolder;
-    padding: .65rem;
     border-radius: .2rem;
     margin: 1rem;
 }
 
 .sign-up:hover {
     background-color: var(--header-hover);
-    /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
     box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
     text-decoration: none;
     color: var(--logout-text);

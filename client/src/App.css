@@ -1,9 +1,8 @@
 :root {
-  --submit-background: #14fff7;
-  --submit-text: black;
-  --submit-hover: #ffafcc;
+  --submit-background: #F8B44Eff;
+  --submit-text: white;
     /* --submit-hover: #80ed99; */
-    /* --submit-hover-og: #F0C879ff; */
+  --submit-hover-og: #F0C879ff;
   --footer-bg: #40916c;
 }
 
@@ -72,8 +71,7 @@ input {
 
 .submit-button:hover {
   background-color: var(--submit-hover);
-  /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
-  box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
+  box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
 }
 
 button {
