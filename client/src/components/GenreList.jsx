@@ -75,14 +75,14 @@ const GenreList = () => {
               <img
                 src={genre.image_background}
                 alt={genre.name}
-                style={{ maxWidth: "100%", height: "auto" }}
+                style={{ maxWidth: "100%", height: "auto", borderRadius: "15px"}}
               />
               <div
                 className="genre-title-overlay"
                 style={{
                   position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
+                  bottom: "12px",
+                  left: "18px",
                   backgroundColor: "rgba(0, 0, 0, 0.7)",
                   color: "#fff",
                   padding: "5px 10px",
