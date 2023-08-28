@@ -16,7 +16,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "Must match an email address!"],
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      'Must match an email address!',
+    ],
   },
   password: {
     type: String,
@@ -26,7 +29,13 @@ const userSchema = new Schema({
   bugs: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Bug",
+      ref: 'Bug',
+    },
+  ],
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment',
     },
   ],
 });
