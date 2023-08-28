@@ -1,3 +1,12 @@
+:root {
+  --submit-background: #14fff7;
+  --submit-text: black;
+  --submit-hover: #ffafcc;
+    /* --submit-hover: #80ed99; */
+    /* --submit-hover-og: #F0C879ff; */
+  --footer-bg: #40916c;
+}
+
 html,
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -20,26 +29,6 @@ body {
   font-size: 14px;
 }
 
-/* 
-nav {
-  height: 50px;
-  background-color: lightgray;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0.5rem;
-}
-nav img {
-  display: flex;
-  justify-content: flex-start;
-}
-
-nav>a,
-nav>button {
-  margin-left: 1rem;
-  text-decoration: none;
-} */
-
 main {
   flex-grow: 1;
   background: url('../src/assets/BBBackground.png') center/cover no-repeat;
@@ -47,7 +36,7 @@ main {
 
 footer {
   height: 80px;
-  background-color: #40916c;
+  background-color: var(--footer-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,32 +49,41 @@ input {
   padding: 0.25rem;
 }
 
-.game-search {
- width: 100%;
+.search {
+  display: inline-block;
+  width: 80%;
+  margin-left: 5rem;
+  text-align: center;
+}
+
+.search-bar {
+ width: 70%;
+ margin-right: 1rem;
+ border-radius: .3rem;
 }
 
 .submit-button {
-  background-color: #40916c;
+  background-color: var(--submit-background);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--submit-text);
+  font-weight: bolder;
 }
 
 .submit-button:hover {
-  background-color: #F0C879ff;
-  box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
+  background-color: var(--submit-hover);
+  /* box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5); */
+  box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
 }
 
 button {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
   text-align: center;
   border: 1px solid transparent;
   padding: .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  color: #fff;
-  background-color: #F0C879ff;
 }
 
 #login-form,
