@@ -1,41 +1,16 @@
 import { Link } from "react-router-dom";
 import { useCurrentUserContext } from "../context/CurrentUser";
-import logo from "./../assets/sony-buttons-logo.png";
-import { HiSun, HiMoon, HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import React, { useState } from "react";
+import logo from "./../assets/BUGbytes-black.png";
+import Search from './Search';
 
 function Header() {
-  const [toggle, setToggle] = useState(true);
   const { isLoggedIn, logoutUser } = useCurrentUserContext();
 
   return (
-    <div className="flex item-center p-5">
+    <div>
       <img src={logo} width={60} height={60} />
-      
-      <div className="flex bg-slate-200 p-2 w-full mx-5 rounded-full item-center">
-        <HiOutlineMagnifyingGlass className="mt-2" />
-        <input
-          type="text"
-          placeholder="Search Games"
-          className="px-2 bg-transparent outline-none"
-        />
-      </div>
+      <Search />
       <div>
-        {toggle ? (
-          <HiMoon
-            size={38}
-            className="text-[35px] bg-slate-200 text-black p-1 rounded-full cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-        ) : (
-          <HiSun
-            size={38}
-            className="text-[35px] bg-slate-200 text-black p-1 rounded-full cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-        )}
-      </div>
-      <div className="flex pl-5 font-bold ">
         {isLoggedIn() ? (
           <>
             <Link to="/profile">Profile</Link>

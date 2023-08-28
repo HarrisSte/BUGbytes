@@ -1,10 +1,23 @@
 const typeDefs = `#graphql
   type User {
-    _id: ID
+    _id: ID!
     firstName: String
     lastName: String
     email: String
     password: String
+  }
+
+  type Bug {
+    _id: ID
+    bugText: String
+    bugAuthor: String
+    createdAt: String
+    comments: String
+  }
+
+  type Game {
+    _id: ID
+    title: String
   }
 
   type Auth {

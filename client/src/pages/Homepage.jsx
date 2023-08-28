@@ -1,5 +1,4 @@
-// import SingleGame from '../components/SingleGame';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Homepage = () => {
@@ -24,10 +23,7 @@ const Homepage = () => {
           games.map(game => (
             <li key={game.id}>
               <Link to={{
-                pathname: `/game/${game.name}`,
-                gameProps: {
-                  game: game
-                }
+                pathname: `/game/${game.id}`
               }}>
                 <h3>{game.name}</h3>
                 <img src={game.background_image} alt='screenshot of game'/>
@@ -36,7 +32,6 @@ const Homepage = () => {
           ))
         }
       </ul>
-      {/* <SingleGame /> */}
     </div>
   );
 }

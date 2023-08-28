@@ -12,6 +12,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.search-input {
+  width: 500px;
+  margin-left: 10rem;
+  height: 30px;
+  font-size: 14px;
+}
+
 /* 
 nav {
   height: 50px;
@@ -34,12 +42,12 @@ nav>button {
 
 main {
   flex-grow: 1;
-  background-color:#393e41;
+  background: url('../src/assets/BBBackground.png') center/cover no-repeat;
 }
 
 footer {
-  height: 60px;
-  background-color: #264653;
+  height: 80px;
+  background-color: #40916c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +58,20 @@ footer {
 input {
   width: 100%;
   padding: 0.25rem;
+}
+
+.game-search {
+ width: 100%;
+}
+
+.submit-button {
+  background-color: #40916c;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #F0C879ff;
+  box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
 }
 
 button {
@@ -63,7 +85,7 @@ button {
   line-height: 1.5;
   border-radius: .25rem;
   color: #fff;
-  background-color: #007bff;
+  background-color: #F0C879ff;
 }
 
 #login-form,
@@ -74,6 +96,8 @@ button {
   max-width: 30rem;
   margin: 3rem auto;
   padding: 1.5rem;
+  background-color: grey;
+  border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
