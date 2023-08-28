@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GameDetail from '../components/GameDetails';
 
@@ -20,13 +20,6 @@ const SingleGame = () => {
 
     return (
         <div className='singlegame'>
-            <div className='homepage-button-singlegame'>
-                <Link to="/">Homepage</Link>
-            </div>
-            <div className='profile-button-singlegame'>
-                <Link to="/profile">Profile</Link>
-            </div>
-
             <div className='save-to-collection-button'>
                 <button type='button'>Save to Collection</button>
             </div>

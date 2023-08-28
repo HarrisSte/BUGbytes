@@ -12,8 +12,6 @@ import './index.css'
 
 import { CurrentUserProvider } from './context';
 
-import './index.css'
-
 import App from "./App";
 import Error from "./pages/Error";
 import Homepage from "./pages/Homepage";
