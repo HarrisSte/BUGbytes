@@ -29,7 +29,6 @@ const userSchema = new Schema({
       ref: "Bug",
     },
   ],
-  image: String,
 });
 
 userSchema.pre('save', async function (next) {
