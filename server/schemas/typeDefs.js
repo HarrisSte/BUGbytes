@@ -5,19 +5,22 @@ const typeDefs = `#graphql
     lastName: String
     email: String
     password: String
+    savedGames: String
+    bugs: [Bug]!
   }
 
   type Bug {
     _id: ID
-    bugText: String
-    bugAuthor: String
+    text: String
+    author: String
     createdAt: String
-    comments: String
+    comments: [Comment]!
   }
 
   type Game {
     _id: ID
-    title: String
+    rawgId: Number
+    bugs: [Bug]!
   }
 
   type Auth {

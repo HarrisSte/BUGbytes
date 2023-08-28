@@ -1,3 +1,12 @@
+:root {
+    --top-five-list-bg: #D4655Aff;
+    --top-five-list-text: #F8B44Eff;
+}
+
+.welcome {
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
 .profile-image {
     width: 200px;
     height: 200px;
@@ -16,8 +25,8 @@
 }
 
 .top-five-list h1 {
-    background-color: #D4655Aff;
-    color: #F8B44Eff;
+    background-color: var(--top-five-list-bg);
+    color: var(--top-five-list-text);
     border-radius: 1rem;
     padding: 1rem;
 }

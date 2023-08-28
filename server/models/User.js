@@ -23,6 +23,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  savedGames: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   bugs: [
     {
       type: Schema.Types.ObjectId,
