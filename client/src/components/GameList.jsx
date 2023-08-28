@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 // import SelectedGenreGames from "./SelectedGenreGames";
 import SelectedGenreGames from "../components/SelectedGenreGames";
 
-
 const GameList = () => {
   const [gamesData, setGamesData] = useState([]);
   const [selectedGenre] = useState(null);
@@ -24,8 +23,6 @@ const GameList = () => {
   }, []);
 
   const popularGames = gamesData.slice(0, 3); // Get the first three games
-
-  
 
   return (
     <div>
@@ -66,14 +63,19 @@ const GameList = () => {
               <img
                 src={gamesData[0].background_image}
                 alt={gamesData[0].name}
-                style={{ maxWidth: "100%", height: "auto" }}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  borderRadius: "15px",
+                  margin: "8px 0",
+                }}
               />
               <div
                 className="game-title-overlay"
                 style={{
                   position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
+                  bottom: "40px",
+                  left: "40px",
                   backgroundColor: "rgba(0, 0, 0, 0.7)",
                   color: "#fff",
                   padding: "5px 10px",
@@ -110,6 +112,7 @@ const GameList = () => {
               width: "100%",
               margin: "0 5px",
               position: "relative",
+              
             }}
           >
             <a
@@ -122,19 +125,20 @@ const GameList = () => {
                 backgroundPosition: "center",
                 borderRadius: "15px",
                 overflow: "hidden",
+
               }}
             >
               <img
                 src={game.background_image}
                 alt={game.name}
-                style={{ maxWidth: "100%", height: "auto" }}
+                style={{ maxWidth: "100%", height: "auto", borderRadius: "15px", margin:"4px 0" }}
               />
               <div
                 className="game-title-overlay"
                 style={{
                   position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
+                  bottom: "20px",
+                  left: "20px",
                   backgroundColor: "rgba(0, 0, 0, 0.7)",
                   color: "#fff",
                   padding: "5px 10px",
@@ -163,9 +167,6 @@ const GameList = () => {
       <div>
         {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />}
       </div>
-      
-
-      
     </div>
   );
 };
