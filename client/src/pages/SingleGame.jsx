@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import GameDetail from '../components/GameDetails';
+import SingleGameBackground from '../assets/singlepage-background.png'
 
 const SingleGame = () => {
 
@@ -19,7 +20,16 @@ const SingleGame = () => {
       }
 
     return (
-        <div className='singlegame'>
+        <div className='singlegame'
+        style={{
+                width: "100%",
+                minHeight: "100vh",
+                backgroundImage: `url(${SingleGameBackground})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                overflow: "hidden",
+              }}
+        >
             <div className='save-to-collection-button'>
                 <button type='button'>Save to Collection</button>
             </div>

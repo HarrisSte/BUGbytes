@@ -30,10 +30,10 @@ body {
   font-size: 14px;
 }
 
-main {
+/* main {
   flex-grow: 1;
   background: url('../src/assets/BBBackground.png') center/cover no-repeat;
-}
+} */
 
 footer {
   height: 80px;

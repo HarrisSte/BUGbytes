@@ -1,9 +1,16 @@
 :root {
+    --header-bg-color: rgb(46, 42, 42);
     --logout-text: black;
     --logout-background: #14fff7;
     --header-hover: #ffafcc;
     /* --header-hover: #80ed99; */
     /* --header-hover-og: #F0C879ff; */
+}
+
+.header {
+    /* background-color: var(--header-bg-color); */
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(69,69,73,1) 50%, rgba(0,0,0,1) 100%);
 }
 
 .logo {

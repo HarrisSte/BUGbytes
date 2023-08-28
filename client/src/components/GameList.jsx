@@ -99,7 +99,7 @@ const GameList = () => {
         }}
       >
         {" "}
-        Most popular games
+        Most Popular Games
       </h3>
       <div className="d-flex justify-content-between">
         {popularGames.map((game) => (
@@ -158,7 +158,7 @@ const GameList = () => {
         }}
       >
         {" "}
-        Games related to the selected genre
+        Games Related To Selected Genre
       </h3>
       <div>
         {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />}

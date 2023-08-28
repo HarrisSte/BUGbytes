@@ -53,11 +53,13 @@ function ProfilePage() {
 
   return (
     <Container>
+      <div className='welcome text-center pt-2'>
+          <h1>Welcome To Your Profile!</h1>
+      </div>
       <Row>
         <Col md={3}>
           <div>
             <Image src={svenImage} className='profile-image' />
-            <h1>WELCOME</h1>
           </div>
         </Col>
         <Col md={8} className='top-five-list'>
