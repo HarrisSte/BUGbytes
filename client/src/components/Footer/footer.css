@@ -1,0 +1,14 @@
+footer {
+    height: 80px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(69,69,73,1) 50%, rgba(0,0,0,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    text-align: center;
+}
+
+.github-icon {
+    color: white;
+}
