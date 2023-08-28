@@ -23,12 +23,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  // bugs: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: "Bug",
-  //   },
-  // ],
+  bugs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Bug",
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {
