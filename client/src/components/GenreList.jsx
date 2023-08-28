@@ -35,7 +35,7 @@ const GenreList = () => {
         }}
       >
         {" "}
-        Genre{" "}
+        Genres{" "}
       </h3>
       <div className=" mb-5">
         {/* Your code snippet */}

@@ -3,6 +3,10 @@
     --top-five-list-text: #F8B44Eff;
 }
 
+.welcome {
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
 .profile-image {
     width: 200px;
     height: 200px;

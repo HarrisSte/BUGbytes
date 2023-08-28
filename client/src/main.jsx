@@ -14,7 +14,7 @@ import { CurrentUserProvider } from './context';
 
 import App from "./App";
 import Error from "./pages/Error";
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
