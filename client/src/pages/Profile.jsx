@@ -1,7 +1,4 @@
-// import React from 'react';
-// import ListGroupWithButtons from '../components/Profile/playLater';
 import ImageComponent from '../components/Profile/ProfilePage';
-// import TopFiveList from '../components/Profile/topFive';
 
 export default function CombinedPage() {
   return (
@@ -9,12 +6,6 @@ export default function CombinedPage() {
       <div>
         <ImageComponent />
       </div>
-      {/* <div>
-        <ListGroupWithButtons />
-      </div>
-      <div>
-        <TopFiveList />
-      </div> */}
     </div>
   );
 }
