@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
-
 import { LOGIN_USER } from '../graphql/mutations';
-
 import { useCurrentUserContext } from '../context/CurrentUser';
+import '../pages/Login/login.css'
 
 export default function Login() {
   const { loginUser } = useCurrentUserContext();
@@ -67,7 +66,7 @@ export default function Login() {
             onChange={handleChange}
           />
         </label>
-        <button type='submit'>Log In</button>
+        <button type='submit' className='log-in-submit'>Log In</button>
         <p>
           Need an account? Sign Up <Link to='/register'>here</Link>
         </p>
