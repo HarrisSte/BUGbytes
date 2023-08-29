@@ -7,7 +7,7 @@ module.exports = {
     const foundUser = await User.findOne({
       $or: [
         { _id: user ? user._id : params.id },
-        { username: params.username },
+        { username: params.username }
       ],
     });
 
