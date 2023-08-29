@@ -5,7 +5,7 @@ const gameSchema = new Schema({
     type: Number,
     required: true
   },
-  //Saved book id
+  //Saved game id
   gameId: {
     type: String,
     required: true,
