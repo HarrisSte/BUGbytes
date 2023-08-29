@@ -52,6 +52,7 @@ const typeDefs = `#graphql
     reportBug(bugText: String!): Bug
     removeBug(bugText: String!): Bug
     addComment(commentText: String!): Bug
+    removeComment(commentText: String!): Bug
   }
 `;
 
