@@ -6,10 +6,7 @@ function Footer() {
   return (
     <footer>
       <div className='footer text-center text-white'>
-        <div className='github'>
-          Want to see the repository for this application?
-        </div>
-        <div className='github-icon pb-3'>
+        <div className='github-icon pb-4'>
           <br/>
           <Link to="https://github.com/HarrisSte/BUGbytes">
             <BsGithub size={30} color="white"/>

@@ -1,7 +1,7 @@
 :root {
     --sign-up-form: #b8f2e6;
-    /* --sign-up-button: #ade8f4; */
     --sign-up-button: #7de2d1;
+    --sign-up-hover-og: #17bebb;
 }
 
 .error-text-registration {
@@ -71,7 +71,7 @@
 }
 
 .sign-up-submit:hover {
-    background-color: var(--header-hover);
+    background-color: var(--sign-up-hover-og);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none; 
     border: none; 
