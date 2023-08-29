@@ -1,4 +1,4 @@
-const { User, Game } = require('../models');
+const { User, Game, Bug } = require('../models');
 const { signToken, AuthenticationError } = require('../utils');
 
 const resolvers = {
