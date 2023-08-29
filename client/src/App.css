@@ -1,7 +1,6 @@
 :root {
   --submit-background: #F8B44Eff;
   --submit-text: white;
-    /* --submit-hover: #80ed99; */
   --submit-hover-og: #F0C879ff;
   --footer-bg: #40916c;
 }
@@ -56,7 +55,7 @@ input {
 }
 
 .submit-button:hover {
-  background-color: var(--submit-hover);
+  background-color: var(--submit-hover-og);
   box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
   border: none; 
 }

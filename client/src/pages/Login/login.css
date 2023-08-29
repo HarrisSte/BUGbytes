@@ -1,6 +1,7 @@
 :root {
     --sign-in-button: rgb(249, 223, 185);
     --login-form: #ffacc5;
+    --login-hover: #F0C879ff;
 }
 
 .error-text {
@@ -51,7 +52,7 @@
 }
 
 .log-in-submit:hover {
-    background-color: var(--header-hover);
+    background-color: var(--login-hover);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none; 
     border: none; 
