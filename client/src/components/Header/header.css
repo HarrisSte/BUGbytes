@@ -38,8 +38,7 @@
 .profile:hover {
     background-color: var(--header-hover);
     box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 .log-out {
@@ -52,10 +51,6 @@
     background-color: var(--header-hover);
     box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
 }
-/* 
-.header-login-buttons {
-    display: inline;
-} */
 
 .log-in {
     display: inline;

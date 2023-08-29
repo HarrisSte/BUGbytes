@@ -1,8 +1,62 @@
 :root {
-    --sign-in-button: #F8B44Eff;
+    --sign-in-button: rgb(249, 223, 185);
+    --login-form: #ffacc5;
+}
+
+.error-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30rem;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: var(--login-form);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.login-text {
+    font-size: 40px;
+}
+
+.email {
+    font-weight: bolder;
+}
+
+.email-input {
+    margin-top: .5rem;
+    border-radius: .4rem;
+    border: none;
+}
+
+.password {
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+.password-input {
+    margin-top: .5rem;
+    border-radius: .4rem;
+    border: none;
 }
 
 .log-in-submit {
     background-color: var(--sign-in-button);
     font-weight: bolder;
+}
+
+.log-in-submit:hover {
+    background-color: var(--header-hover);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none; 
+    border: none; 
+}
+
+.need-an-account {
+    text-align: center;
 }

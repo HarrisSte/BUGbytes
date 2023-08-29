@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
-
+import SignupBackground from '../assets/signup-background.png'
 import { REGISTER_USER } from '../graphql/mutations';
-
+import '../pages/Register/register.css'
 import { useCurrentUserContext } from '../context/CurrentUser';
 
 export default function Registration() {
@@ -44,17 +44,29 @@ export default function Registration() {
   };
 
   return (
+    <div className="homepage"
+              style={{
+                width: "100%",
+                height: "100vh",
+                backgroundImage: `url(${SignupBackground})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                overflow: "hidden",
+              }}
+      >
     <>
       {error ? (
         <div>
-          <p className='error-text'>The provided credentials are incorrect</p>
+          <p className='error-text-registration'>The provided credentials are incorrect!</p>
         </div>
       ) : null}
       <form id='registration-form' onSubmit={handleFormSubmit}>
-        <h2>Register</h2>
-        <label htmlFor='firstName'>
+        <h2 className='register-text'>Register</h2>
+        <label htmlFor='firstName' className='first-name'>
           First name:
           <input
+            className='register-first-name-input'
+            placeholder='John'
             type='text'
             id='firstName'
             name='firstName'
@@ -62,9 +74,11 @@ export default function Registration() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor='lastName'>
+        <label htmlFor='lastName' className='last-name'>
           Last name:
           <input
+            className='register-last-name-input'
+            placeholder='Doe'
             type='text'
             id='lastName'
             name='lastName'
@@ -72,9 +86,10 @@ export default function Registration() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor='email'>
+        <label htmlFor='email' className='register-email'>
           Email:
           <input
+            className='register-email-input'
             placeholder='Enter your email address'
             name='email'
             type='email'
@@ -82,9 +97,10 @@ export default function Registration() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor='password'>
+        <label htmlFor='password' className='register-password'>
           Password
           <input
+            className='register-password-input'
             placeholder='******'
             name='password'
             type='password'
@@ -92,11 +108,12 @@ export default function Registration() {
             onChange={handleChange}
           />
         </label>
-        <button type='submit'>Sign Up</button>
-        <p>
-          Already have an account? Log In <Link to='/login'>here</Link>
+        <button type='submit' className='sign-up-submit'>Sign Up</button>
+        <p className='have-an-account'>
+          Already have an account? <Link to='/login'>Log In</Link>
         </p>
       </form>
     </>
+    </div>
   );
 }
