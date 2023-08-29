@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import parse from 'html-react-parser';
 
-const GameDetail = (props) => {
+const GamePage = (props) => {
   const game = props.game;
 
   const descriptionContent =
@@ -81,4 +81,4 @@ const GameDetail = (props) => {
   );
 };
 
-export default GameDetail;
+export default GamePage;
