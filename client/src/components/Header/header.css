@@ -63,7 +63,7 @@
 
 .log-in:hover {
     background-color: var(--header-hover);
-    box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
+    box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
     text-decoration: none;
     color: var(--logout-text);
 }
@@ -78,7 +78,7 @@
 
 .sign-up:hover {
     background-color: var(--header-hover);
-    box-shadow: 0 0 10px 5px rgba(255, 0, 242, 0.5);
+    box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
     text-decoration: none;
     color: var(--logout-text);
 }

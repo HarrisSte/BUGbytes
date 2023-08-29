@@ -98,7 +98,7 @@ export default function Registration() {
           />
         </label>
         <label htmlFor='password' className='register-password'>
-          Password
+          Password:
           <input
             className='register-password-input'
             placeholder='******'
