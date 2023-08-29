@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Results from './Results';
 import { BsSearchHeart } from "react-icons/bs";
 
