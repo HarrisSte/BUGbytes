@@ -47,6 +47,7 @@ const GenreList = () => {
               width: "100%",
               margin: "0 5px",
               position: "relative",
+              marginBottom: '8px'
             }}
             >
                 {/* <button
@@ -69,6 +70,7 @@ const GenreList = () => {
                 backgroundPosition: "center",
                 borderRadius: "15px",
                 overflow: "hidden",
+                boxShadow:' rgba(0, 0, 0, 0.99) 0px -50px 36px -28px inset'
               }} 
               onClick={() => handleGenreClick(genre.id)}
             >
