@@ -1,9 +1,10 @@
-import React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
+
 import './SingleGame.css';
 
 const GameHeaderCard = ({ game }) => {
@@ -12,9 +13,9 @@ const GameHeaderCard = ({ game }) => {
       <Card.Header>{game.name}</Card.Header>
       <Card.Body>
         <Card.Img src={game.background_image} alt='game image' />
-        <h5>Released:</h5> <p>{game.released}</p>
-        <h5>Rating:</h5> <p>{game.rating}</p>
-        <h5>Platform(s):</h5>
+        <h5>Released 📆 </h5> <p>{game.released}</p>
+        <h5>Rating 🏆</h5> <p>{game.rating}</p>
+        <h5>Platform(s) 🎮 🖥️ 🕹️ </h5>
         <p>
           {game.platforms &&
             game.platforms.length > 0 &&
@@ -40,7 +41,7 @@ const GameDescriptionCard = ({ game }) => {
   return (
     <Card className='game-description'>
       <Card.Body>
-        <Card.Title>Game Description</Card.Title>
+        <Card.Title>Game Description 📜</Card.Title>
         <Card.Text>{parse(descriptionContent)}</Card.Text>
       </Card.Body>
     </Card>
