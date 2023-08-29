@@ -58,6 +58,7 @@ input {
 .submit-button:hover {
   background-color: var(--submit-hover);
   box-shadow: 0 0 10px 5px rgba(240, 200, 121, 0.5);
+  border: none; 
 }
 
 button {
@@ -69,19 +70,6 @@ button {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-}
-
-#login-form,
-#registration-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 30rem;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  background-color: grey;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .page-title {
