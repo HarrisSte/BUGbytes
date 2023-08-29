@@ -10,7 +10,7 @@ import { Outlet } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 
 import Header from './components/Header/NavLinks';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [cookies] = useCookies(['auth_token']);

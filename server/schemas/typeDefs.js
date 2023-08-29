@@ -49,6 +49,8 @@ const typeDefs = `#graphql
     login(email: String!, password: String!): Auth
     saveGame(gameInput: GameInput): User
     removeGame(gameId: ID!): User
+    reportBug(bugText: String!): Bug
+    addComment(commentText: String!): Bug
   }
 `;
 

@@ -1,8 +1,4 @@
-//NavLinks to display at top of page. When selected, they will highlight a different color.
-// import { useState } from "react";
-// import { useLocation } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
-// import { Link } from "react-router-dom";
 import { useCurrentUserContext } from "../../context/CurrentUser";
 import logo from "../../assets/BUGbytes-white.png";
 import Search from "../Search";

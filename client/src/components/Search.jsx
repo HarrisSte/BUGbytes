@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Results from './Results';
+import { BsSearchHeart } from "react-icons/bs";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -29,6 +30,7 @@ const Search = () => {
   return (
     <div className='search'>
       <form onSubmit={onSubmit}>
+      <BsSearchHeart size={30} color="white" />
         <input className='search-bar' type='text' placeholder='Search for games!' value={searchTerm} onChange={handleChange} />
         <button className='submit-button' type='submit'>Submit</button>
       </form>
