@@ -1,6 +1,7 @@
 h5 {
-    background-color: #007bff;
+    background-color: #C8A954ff;
     margin-top: 1rem;
+    padding: .5rem;
 }
 
 .game-header {
@@ -11,14 +12,17 @@ h5 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    
 }
 
 .card-header {
-    background-color: #007bff;
+    background-color: #C8A954ff;
     border-bottom: solid black;
     font-size: 2rem;
+}
 
+.card-title {
+    background-color: #C8A954ff;
+    padding: .5rem;
 }
 
 .game-description {
@@ -28,7 +32,8 @@ h5 {
     padding: 1rem;
     margin-top: 2rem;
     border-radius: 1rem;
-    
+    margin-bottom: 2rem;
+
 }
 
 .save-to-collection-button {
@@ -39,9 +44,14 @@ h5 {
 }
 
 .save-to-collection-button button {
-    background-color: #007bff;
+    background-color: #D4655Aff;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.save-to-collection-button button:hover {
+    box-shadow: 0 0 10px #D4655A;
 }
