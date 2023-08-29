@@ -32,7 +32,7 @@ const resolvers = {
     saveGame: async (parent, { gameInput }, context) => {
       if (context.user) {
         const game = await Game.findByIdAndUpdate(
-          context.user._id,
+          context.user_id,
           { $push: { savedGames: gameInput } },
           { new: true }
         );
@@ -44,7 +44,7 @@ const resolvers = {
     removeGame: async (parent, { gameId }, context) => {
       if (context.user) {
         const game = await Game.findByIdAndUpdate(
-          context.user._id,
+          context.user_id,
           { $pull: { savedGames: gameId } },
           { new: true }
         );
@@ -56,8 +56,20 @@ const resolvers = {
     reportBug: async (parent, { bugText }, context) => {
       if (context.user) {
         const bug = await Bug.findByIdAndUpdate(
-          context.user_id,
+          context.user _id,
           { $push: { reportBug: bugText } },
+          { new: true }
+        );
+        return bug;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
+    removeBug: async (parent, { bugText }, context) => {
+      if (context.user) {
+        const bug = await Bug.findByIdAndUpdate(
+          context.user_id,
+          { $pull: { reportBug: bugText } },
           { new: true }
         );
         return bug;
