@@ -53,11 +53,11 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    reportBug: async (parent, {bugText},context) => {
+    reportBug: async (parent, { bugText }, context) => {
       if (context.user) {
         const bug = await Bug.findByIdAndUpdate(
           context.user_id,
-          { $push: {reportBug : bugText } },
+          { $push: { reportBug: bugText } },
           { new: true }
         );
         return bug;
@@ -65,7 +65,17 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    
+    addComment: async (parent, { commentText }, context) => {
+      if (context.user) {
+        const comment = await Comment.findByIdAndUpdate(
+          context.user_id,
+          { $push: { addComment: commentText } },
+          { new: true }
+        );
+        return comment;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 };
 
