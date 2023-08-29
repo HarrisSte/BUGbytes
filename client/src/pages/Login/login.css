@@ -1,0 +1,8 @@
+:root {
+    --sign-in-button: #F8B44Eff;
+}
+
+.log-in-submit {
+    background-color: var(--sign-in-button);
+    font-weight: bolder;
+}

@@ -16,7 +16,7 @@ import App from "./App";
 import Error from "./pages/Error";
 import Homepage from "./pages/Homepage/Homepage";
 import Profile from "./pages/Profile";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
 import SingleGame from './pages/SingleGame';
 import Search from './components/Search';

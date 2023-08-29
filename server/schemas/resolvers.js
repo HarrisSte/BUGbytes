@@ -56,7 +56,7 @@ const resolvers = {
     reportBug: async (parent, { bugText }, context) => {
       if (context.user) {
         const bug = await Bug.findByIdAndUpdate(
-          context.user _id,
+          context.user_id,
           { $push: { reportBug: bugText } },
           { new: true }
         );
