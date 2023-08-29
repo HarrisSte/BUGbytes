@@ -38,7 +38,7 @@ const resolvers = {
         );
         return game;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
 
     removeGame: async (parent, { gameId }, context) => {
@@ -48,11 +48,24 @@ const resolvers = {
           { $pull: { savedGames: gameId } },
           { new: true }
         );
-
         return game;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("You need to be logged in!");
     },
+
+    reportBug: async (parent, {bugText},context) => {
+      if (context.user) {
+        const bug = await Bug.findByIdAndUpdate(
+          context.user_id,
+          { $push: {reportBug : bugText } },
+          { new: true }
+        );
+        return bug;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
+    
   },
 };
 
