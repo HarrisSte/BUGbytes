@@ -24,20 +24,20 @@ const GenreList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center" >
       <h3
-        className=" mb-5 text-center"
+        className="mb-4 text-center"
         style={{
           textDecoration: "underline",
           fontFamily: "Montserrat, sans-serif",
-          fontSize: "46px",
+          fontSize: "40px",
           fontWeight: "900",
+
         }}
       >
-        {" "}
-        Genres{" "}
+        Genres
       </h3>
-      <div className=" mb-5">
+      <div className=" flex mb-5 d-flex flex-column align-items-center">
         {/* Your code snippet */}
         {genreData.map((genre) => (
           <div
@@ -45,8 +45,9 @@ const GenreList = () => {
             className="d-flex flex-column align-items-center"
             style={{
               width: "100%",
-              margin: "0 5px",
+              margin: "5px",
               position: "relative",
+              marginBottom: '8px'
             }}
             >
                 {/* <button
@@ -69,6 +70,7 @@ const GenreList = () => {
                 backgroundPosition: "center",
                 borderRadius: "15px",
                 overflow: "hidden",
+                boxShadow:' rgba(0, 0, 0, 0.99) 0px -50px 36px -28px inset'
               }} 
               onClick={() => handleGenreClick(genre.id)}
             >
