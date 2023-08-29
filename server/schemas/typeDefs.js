@@ -49,10 +49,10 @@ const typeDefs = `#graphql
     login(email: String!, password: String!): Auth
     saveGame(gameInput: GameInput): User
     removeGame(gameId: ID!): User
-    reportBug(bugText: String!): Bug
-    removeBug(bugText: String!): Bug
-    addComment(commentText: String!): Bug
-    removeComment(commentText: String!): Bug
+    reportBug(bugText: String!): User
+    removeBug(bugText: String!): User
+    addComment(commentText: String!): User
+    removeComment(commentText: String!): User
   }
 `;
 
