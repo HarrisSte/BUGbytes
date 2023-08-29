@@ -50,6 +50,7 @@ const typeDefs = `#graphql
     saveGame(gameInput: GameInput): User
     removeGame(gameId: ID!): User
     reportBug(bugText: String!): Bug
+    removeBug(bugText: String!): Bug
     addComment(commentText: String!): Bug
   }
 `;
