@@ -12,17 +12,20 @@ h5 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
+    border: solid 6px #D4655A;
 }
 
 .card-header {
     background-color: #C8A954ff;
     border-bottom: solid black;
     font-size: 2rem;
+    
 }
 
 .card-title {
     background-color: #C8A954ff;
     padding: .5rem;
+    
 }
 
 .game-description {
@@ -33,6 +36,7 @@ h5 {
     margin-top: 2rem;
     border-radius: 1rem;
     margin-bottom: 2rem;
+    border: solid 6px #D4655A;
 
 }
 
