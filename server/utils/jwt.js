@@ -1,10 +1,10 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
-const { secret, expiration } = require('./constants');
+const { secret, expiration } = require("./constants");
 
 module.exports = {
-  signToken ({ email, firstName, lastName, _id }) {
-    const payload = { email, firstName, lastName, _id };
+  signToken({ email, firstName, lastName, _id, profileImageUrl }) {
+    const payload = { email, firstName, lastName, _id, profileImageUrl };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };

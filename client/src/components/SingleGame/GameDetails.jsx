@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
-import Column  from '../Comments/Bugs'
+import Comment  from '../Comments/Comment'
 // import Bug from '../Comments/Bugs'
 // import Comment from '../Comments/Comment';
 import './SingleGame.css';
@@ -61,7 +61,7 @@ const GamePage = (props) => {
       <Row>
         <Col md={8}>
           <GameHeaderCard game={game} /> 
-          < Column />
+          < Comment />
         </Col>           
         <Col md={4}>
           <GameDescriptionCard game={game} />

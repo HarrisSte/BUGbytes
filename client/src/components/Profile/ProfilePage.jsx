@@ -6,11 +6,15 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import ProfileImageUpload from '../ProfileImageUpload';
+import { useCurrentUserContext } from "../../context/CurrentUser";
 
 import svenImage from '../../assets/sven.jpg';
 import './profileStyle.css';
 
 function ProfilePage() {
+  const { currentUser } = useCurrentUserContext();
+
   const [playLaterCards, setPlayLaterCards] = useState([
     {
       title: 'PLAY LATER CARD 1',
@@ -49,10 +53,11 @@ function ProfilePage() {
       <div className='welcome text-center pt-2'>
           <h1>Welcome To Your Profile!</h1>
       </div>
+      <ProfileImageUpload />
       <Row>
         <Col md={3}>
           <div>
-            <Image src={svenImage} className='profile-image' />
+            <Image src={currentUser.profileImageUrl ?? svenImage} className='profile-image' />
           </div>
         </Col>
         <Col md={8} className='top-five-list'>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // import SelectedGenreGames from "../components/SelectedGenreGames";
 import {Link} from "react-router-dom"
-import '../Genres/genre.css'
+import './genre.css'
 
 const GenreList = () => {
   const [genreData, setGenreData] = useState([]);
