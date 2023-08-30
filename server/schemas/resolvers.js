@@ -1,9 +1,19 @@
-const { User, Game, Bug } = require('../models');
-const { signToken, AuthenticationError } = require('../utils');
+const { User, Game, Bug } = require("../models");
+const { signToken, AuthenticationError } = require("../utils");
 
 const resolvers = {
   Query: {
     currentUser: async (parent, { email }) => User.findOne({ email }),
+    bug: async (parent, { bugId }) =>
+      Bug.findOne({ _id: bugId }).populate("comments.author"),
+    game: async (parent, { gameId }) =>
+      Game.findOne({ rawgId: gameId }).populate({
+        path: "bugs",
+        populate: {
+          path: "comments.author",
+          model: "User",
+        },
+      }),
   },
 
   Mutation: {
@@ -29,6 +39,17 @@ const resolvers = {
 
       return { token, currentUser: user };
     },
+    updateProfilePicture: async (parent, { file }, context) => {
+      if (context.user) {
+        await User.findByIdAndUpdate(
+          context.user._id,
+          { $set: { profileImageUrl: file } },
+          { new: true }
+        );
+
+        return true;
+      }
+    },
     saveGame: async (parent, { gameInput }, context) => {
       if (context.user) {
         const game = await Game.findByIdAndUpdate(
@@ -53,11 +74,20 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    reportBug: async (parent, { bugText }, context) => {
+    reportBug: async (parent, { bugText, gameId }, context) => {
       if (context.user) {
-        const bug = await Bug.findByIdAndUpdate(
-          context.user_id,
-          { $push: { reportBug: bugText } },
+        const bug = await Bug.create({
+          text: bugText,
+          author: context.user._id,
+        });
+        await Game.findOneAndUpdate(
+          { rawgId: gameId },
+          { $push: { bugs: bug._id } },
+          { new: true, upsert: true }
+        );
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { bugs: bug._id } },
           { new: true }
         );
         return bug;
@@ -77,14 +107,18 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    addComment: async (parent, { commentText }, context) => {
+    addComment: async (parent, { comment }, context) => {
       if (context.user) {
-        const comment = await Comment.findByIdAndUpdate(
-          context.user_id,
-          { $push: { addComment: commentText } },
+        const newComment = {
+          commentBody: comment.commentBody,
+          author: context.user._id,
+        };
+        const bug = await Bug.findByIdAndUpdate(
+          comment.bugId,
+          { $push: { comments: newComment } },
           { new: true }
-        );
-        return comment;
+        ).populate("comments.author");
+        return bug;
       }
       throw new AuthenticationError("You need to be logged in!");
     },
