@@ -2,35 +2,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 1rem;
 }
 
 .results-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .results-card img {
     max-width: 100%;
-    border-radius: 8px 8px 0 0;
+    border-radius: 14% 14% 0% 0% / 14% 14% 0% 0%
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .results-card .card-title {
     font-size: 1.2rem;
-    margin: 10px 0;
-    background-color: #777;
+    background-color: #5c415d;
     color: #fff;
-    padding: 8px;
-    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+    border-radius: 0% 0% 14% 14% / 87% 0% 14% 13%;
     text-align: center;
 }
