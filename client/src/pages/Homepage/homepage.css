@@ -1,3 +1,46 @@
 .page-title {
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
+
+.main-games {
+    margin-left: 12rem;
+}
+
+@media screen and (max-width: 1440px) {
+   .main-games {
+        margin-left: 5rem;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-games {
+         margin-left: 3rem;
+         margin-right: -7rem;
+    }
+ }
+
+@media screen and (max-width: 540px) {
+    .main-games {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+ }
+
+@media screen and (max-width: 425px) {
+    .main-games {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+ }
+
+@media screen and (max-width: 320px) {
+    .page-title {
+        margin-left: -1rem;
+    }
+ }
+
+@media screen and (max-width: 280px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+ }
