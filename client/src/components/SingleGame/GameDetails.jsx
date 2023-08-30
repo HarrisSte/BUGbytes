@@ -5,6 +5,10 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
 
+
+
+
+
 import './SingleGame.css';
 
 const GameHeaderCard = ({ game }) => {
@@ -29,7 +33,11 @@ const GameHeaderCard = ({ game }) => {
         <div className='save-to-collection-button'>
           <button type='button'>Add To Top Five</button>
         </div>
+        
       </Card.Body>
+      
+
+      
     </Card>
   );
 };
@@ -43,6 +51,7 @@ const GameDescriptionCard = ({ game }) => {
       <Card.Body>
         <Card.Title>Game Description 📜</Card.Title>
         <Card.Text>{parse(descriptionContent)}</Card.Text>
+        
       </Card.Body>
     </Card>
   );
@@ -59,10 +68,13 @@ const GamePage = (props) => {
         </Col>
         <Col md={6}>
           <GameDescriptionCard game={game} />
+          
         </Col>
       </Row>
     </Container>
+    
   );
+
 };
 
 export default GamePage;
