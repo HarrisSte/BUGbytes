@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import GameList from "../../components/GameList";
+import GameList from "../../components/GameList/GameList";
 import GenreList from "../../components/Genres/GenreList";
 // import SelectedGenreGames
 //  from "../components/SelectedGenreGames";
