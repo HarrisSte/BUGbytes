@@ -4,31 +4,33 @@ const typeDefs = `#graphql
     firstName: String
     lastName: String
     email: String
+    profileImageUrl: String
     password: String
     savedGames: [Game]
     bugs: [Bug]
-    comments: [Comment]
   }
 
   type Bug {
     _id: ID
-    bugText: String
-    bugAuthor: String
+    text: String
+    author: String
     createdAt: String
     comments: [Comment]
   }
 
-  type Comment {
-  commentId: ID
-  commentBody: String
-  username: String
-  createdAt: String
+  input CommentInput {
+    bugId: ID
+    commentBody: String
+  }
 
+  type Comment {
+    commentBody: String
+    author: User
+    createdAt: String
   }
 
   type Game {
-    _id: ID
-    title: String
+    bugs: [Bug]
   }
 
   type Auth {
@@ -38,6 +40,8 @@ const typeDefs = `#graphql
 
   type Query {
       currentUser(email: String!): User
+      bug(bugId: ID) : Bug
+      game(gameId: ID) : Game
   }
 
   input GameInput {
@@ -49,10 +53,11 @@ const typeDefs = `#graphql
     login(email: String!, password: String!): Auth
     saveGame(gameInput: GameInput): User
     removeGame(gameId: ID!): User
-    reportBug(bugText: String!): User
-    removeBug(bugText: String!): User
-    addComment(commentText: String!): User
+    reportBug(bugText: String!, gameId: ID!): Bug
+    removeBug(bugText: String!): Boolean
+    addComment(comment: CommentInput): Bug
     removeComment(commentText: String!): User
+    updateProfilePicture(file: String!): Boolean
   }
 `;
 
