@@ -35,7 +35,6 @@ const Homepage = () => {
               {" "}
               <GameList />
               {/* {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />} */}
-              
             </Col>
           </Row>
         </Container>

@@ -21,6 +21,12 @@
 }
 
 @media screen and (max-width: 1440px) {
+    .carousel-captions {
+        font-size: 3rem;
+        bottom: 1rem;
+        left: -1rem;
+    }
+
     .popular-game-title-overlay {
         font-size: 1rem;
     }
