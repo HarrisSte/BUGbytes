@@ -1,19 +1,18 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const commentSchema = require("./Comment");
 
 const bugSchema = new Schema({
   text: {
     type: String,
-    required: 'You need to leave a bug!',
+    required: "You need to leave a bug!",
     minlength: 1,
     maxlength: 280,
     trim: true,
   },
   author: {
-    type: String,
-    required: true,
-    trim: true,
+    type: Schema.Types.ObjectId,
+    ref: "User",
   },
   createdAt: {
     type: Date,
@@ -27,6 +26,6 @@ bugSchema.virtual("bugCount").get(function () {
   return this.comments.length;
 });
 
-const bug = model('bug', bugSchema);
+const bug = model("bug", bugSchema);
 
 module.exports = bug;

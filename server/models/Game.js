@@ -3,23 +3,16 @@ const { Schema, model } = require("mongoose");
 const gameSchema = new Schema({
   rawgId: {
     type: Number,
-    required: true
-  },
-  //Saved game id
-  gameId: {
-    type: String,
     required: true,
   },
-  image: {
-    type: String,
-  },
-  
-  bugs: [{
-    type: Schema.Types.ObjectId,
-    ref: "bug",
-  }]
+  bugs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "bug",
+    },
+  ],
 });
 
 const game = model("game", gameSchema);
 
-module.exports = gameSchema;
+module.exports = game;

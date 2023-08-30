@@ -11,9 +11,9 @@ const commentSchema = new Schema(
       required: true,
       maxlength: 280,
     },
-    username: {
-      type: String,
-      required: true,
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
     createdAt: {
       type: Date,
@@ -28,5 +28,7 @@ const commentSchema = new Schema(
     id: false,
   }
 );
+
+module.exports = commentSchema;
 
 module.exports = commentSchema;

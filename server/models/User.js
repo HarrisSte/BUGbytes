@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const bcrypt = require('bcryptjs');
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcryptjs");
 
 const userSchema = new Schema({
   firstName: {
@@ -18,7 +18,7 @@ const userSchema = new Schema({
     unique: true,
     match: [
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      'Must match an email address!',
+      "Must match an email address!",
     ],
   },
   password: {
@@ -26,22 +26,37 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  profileImageUrl: {
+    type: String,
+    required: false,
+  },
   bugs: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Bug',
+      ref: "bug",
     },
   ],
-  comments: [
+  topFiveGames: {
+    type: [
+      {
+        type: String,
+      },
+    ],
+    validate: [arrayLimit, "{PATH} exceeds the limit of 10"],
+  },
+  playLater: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Comment',
+      type: Number,
     },
   ],
 });
 
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+function arrayLimit(val) {
+  return val.length <= 5;
+}
+
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -82,6 +97,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
 module.exports = User;
