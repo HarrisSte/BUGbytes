@@ -76,3 +76,39 @@
     text-decoration: none;
     color: var(--logout-text);
 }
+
+@media screen and (max-width: 912px) {
+    .logo {
+        display: block;
+    }
+    
+    .header-buttons {
+        padding-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+@media screen and (max-width: 414px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+}

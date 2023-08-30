@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import GameList from "../../components/GameList";
-import GenreList from "../../components/GenreList";
+import GenreList from "../../components/Genres/GenreList";
 // import SelectedGenreGames
 //  from "../components/SelectedGenreGames";
 import HomepageBackground from "../../assets/homepage-background.png";
@@ -24,14 +24,14 @@ const Homepage = () => {
       >
       <h1 className="page-title p-5">Welcome to BUGbytes!</h1>
 
-      <div>
-        <Container>
+      <div className='main-games'>
+        <Container fluid>
           <Row>
             <Col sm={2}>
               {" "}
               <GenreList />
             </Col>
-            <Col sm={10}>
+            <Col sm={8}>
               {" "}
               <GameList />
               {/* {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />} */}
