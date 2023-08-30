@@ -44,13 +44,6 @@ function ProfilePage() {
     },
   ]);
 
-  // function updateCardInfo(index, newTitle, newText) {
-  //   const updatedCards = [...playLaterCards];
-  //   updatedCards[index].title = newTitle;
-  //   updatedCards[index].text = newText;
-  //   setPlayLaterCards(updatedCards);
-  // }
-
   return (
     <Container>
       <div className='welcome text-center pt-2'>

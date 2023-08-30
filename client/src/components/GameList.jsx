@@ -23,12 +23,11 @@ const GameList = () => {
       });
   }, []);
 
-  const popularGames = gamesData.slice(0, 3); // Get the first three games
+  const popularGames = gamesData.slice(0, 3);
 
   return (
     <div>
       <Carousel interval={2000}>
-        {" "}
         {gamesData.slice(0, 25).map((game) => (
           <Carousel.Item key={game.id}>
             <a href={`/game/${game.id}`}>
@@ -71,7 +70,6 @@ const GameList = () => {
           fontWeight: "900",
         }}
       >
-        {" "}
         Most Popular Games
       </h3>
       <div className="d-flex justify-content-between">

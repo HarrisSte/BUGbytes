@@ -1,6 +1,7 @@
-import Results from '../../components/Results';
+import ResultsCard from '../../components/SearchResults/Results';
 import { useLocation } from 'react-router-dom';
 import ResultsBackground from '../../assets/results-background.png';
+import '../../components/SearchResults/Results.css';
 
 const GameResults = () => {
   const location = useLocation();
@@ -18,9 +19,9 @@ const GameResults = () => {
         overflow: 'hidden',
       }}
     >
-      <div className='game-info'>
+      <div className='game-info grid-container'>
         {gameResults.map((game, index) => (
-          <Results key={index} game={game} />
+          <ResultsCard key={index} game={game} />
         ))}
       </div>
     </div>
