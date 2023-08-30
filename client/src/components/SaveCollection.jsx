@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import ReactDOM  from 'react-dom';
+import { useState } from 'react';
 
-class SaveCollection extends React.Component {
-  handleSave(event) {
-    console.log(this, event);
-  }
-  render() {
-    return React.createElement(
-      "div",
-      null,
-      React.createElement(
-        "button",
-        { onClick: this.handleSave.bind(this) },
-        "Save To Collection"
-      )
-    );
-  }
+const SaveCollection () {
+  const [saveGame, setSaveGame] = useState([{ game: '' }]);
+
+  const handleGameChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...gameList];
+    list[index][name] = value;
+    setSaveGame(list);
+  };
+
+  const handleGameRemove = (index) => {
+    const list = [...gameList];
+    list.splice(index, 1);
+    setSaveGame(list);
+  };
+
+  const handleGameAdd = () => {
+    setSaveGame([...gameList, { game: '' }]);
+  };
+  
+
+  return (
+    
+  )
 }
 
 export default SaveCollection;

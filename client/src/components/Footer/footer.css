@@ -5,10 +5,25 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 5rem;
     text-align: center;
+    border: solid;
 }
 
 .github-icon {
     color: white;
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    footer {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
 }

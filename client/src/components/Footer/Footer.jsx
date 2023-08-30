@@ -7,7 +7,6 @@ function Footer() {
     <footer>
       <div className='footer text-center text-white'>
         <div className='github-icon pb-4'>
-          <br/>
           <Link to="https://github.com/HarrisSte/BUGbytes">
             <BsGithub size={30} color="white"/>
           </Link>

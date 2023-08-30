@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 import { useCurrentUserContext } from '../../context/CurrentUser';
 import logo from '../../assets/BUGbytes-white.png';
 import Search from '../Search';
-import './header.css';
+import './navlinks.css';
 
 function NavLinks() {
   const { isLoggedIn, logoutUser } = useCurrentUserContext();
