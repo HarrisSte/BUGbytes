@@ -1,31 +1,25 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Results = (props) => {
-
+const Results = ({ game }) => {
   return (
-    <div className="results-container">
-      <ul>
+    <div className='results-container'>
       {
-        props.gameResults.map(game => (
-          <li key={game.id}>
-
-            <Link to={{
-              pathname: `/game/${game.name}`,
-              gameProps:{
-                game: game
-              }
-            }}>
+        <div>
+          <Link
+            to={{
+              pathname: `/game/${game.id}`,
+              gameProps: {
+                game: game,
+              },
+            }}
+          >
             <h3>{game.name}</h3>
-            <img src={game.background_image} alt="game"/>
-            </Link>
-            
-          </li>
-        ))
+            <img src={game.background_image} alt='game' />
+          </Link>
+        </div>
       }
-      </ul>
     </div>
   );
-}
+};
 
 export default Results;
