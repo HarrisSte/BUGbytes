@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './results.css';
+import './Results.css';
 
 const ResultsCard = ({ game }) => {
   const gameLink = {
