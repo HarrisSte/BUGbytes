@@ -6,8 +6,8 @@ const UploadAndDisplayImage = () => {
   const [uploadFile, { data }] = useMutation(UPLOAD_FILE);
   var myWidget = window.cloudinary.createUploadWidget(
     {
-      cloudName: "",
-      uploadPreset: "",
+      cloudName: "das4fknkp",
+      uploadPreset: "zx0yxf3g",
     },
     (error, result) => {
       if (!error && result && result.event === "success") {
