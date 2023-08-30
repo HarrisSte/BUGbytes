@@ -3,7 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
-
+import Column  from '../Comments/Bugs'
+// import Bug from '../Comments/Bugs'
+// import Comment from '../Comments/Comment';
 import './SingleGame.css';
 
 const GameHeaderCard = ({ game }) => {
@@ -28,7 +30,7 @@ const GameHeaderCard = ({ game }) => {
         <div className='save-to-collection-button'>
           <button type='button'>Add To Top Five</button>
         </div> 
-      </Card.Body>      
+      </Card.Body> 
     </Card>
   );
 };
@@ -47,19 +49,24 @@ const GameDescriptionCard = ({ game }) => {
   );
 };
 
+
+
+
+
 const GamePage = (props) => {
   const game = props.game;
 
   return (
     <Container>
       <Row>
-        <Col md={6}>
-          <GameHeaderCard game={game} />
-        </Col>
-        <Col md={6}>
+        <Col md={8}>
+          <GameHeaderCard game={game} /> 
+          < Column />
+        </Col>           
+        <Col md={4}>
           <GameDescriptionCard game={game} />
-          
         </Col>
+        
       </Row>
     </Container>  
   );
