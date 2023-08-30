@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import SelectedGenreGames from "../components/SelectedGenreGames";
 import {Link} from "react-router-dom"
+import '../Genres/genre.css'
 
 const GenreList = () => {
   const [genreData, setGenreData] = useState([]);
@@ -26,11 +27,10 @@ const GenreList = () => {
   return (
     <div className="d-flex flex-column align-items-center" >
       <h3
-        className="mb-4 text-center"
+        className="genre-title mb-4 text-center"
         style={{
           textDecoration: "underline",
           fontFamily: "Montserrat, sans-serif",
-          fontSize: "40px",
           fontWeight: "900",
 
         }}
@@ -38,11 +38,10 @@ const GenreList = () => {
         Genres
       </h3>
       <div className=" flex mb-5 d-flex flex-column align-items-center">
-        {/* Your code snippet */}
         {genreData.map((genre) => (
           <div
             key={genre.id}
-            className="d-flex flex-column align-items-center"
+            className="genres d-flex flex-column align-items-center"
             style={{
               width: "100%",
               margin: "5px",
@@ -50,16 +49,6 @@ const GenreList = () => {
               marginBottom: '8px'
             }}
             >
-                {/* <button
-              className="btn btn-light"
-              style={{
-                width: "100%",
-                backgroundImage: `url(${genre.image_background})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: "15px",
-                overflow: "hidden",
-              }} */}
             <Link
               href={`/genres/${genre.id}`}
               className="btn btn-light"
@@ -89,7 +78,6 @@ const GenreList = () => {
                   color: "#fff",
                   padding: "5px 10px",
                   borderRadius: "5px",
-                  fontSize: "10px",
                 }}
               >
                 {genre.name}
@@ -97,7 +85,6 @@ const GenreList = () => {
             </Link>
           </div>
         ))}
-        {/* <div style={{ width: "100%" }}></div> */}
       </div>
       {/* {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />} */}
     </div>

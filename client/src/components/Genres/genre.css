@@ -1,0 +1,53 @@
+@media screen and (max-width: 1440px) {
+    .genre-title {
+        font-size: 40px;
+    }
+ }
+
+@media screen and (max-width: 1024px) {
+    .genre-title {
+        font-size: 30px;
+    }
+ }
+
+@media screen and (max-width: 820px) {
+    .genre-title-overlay {
+        font-size: .6rem;
+    }
+ }
+
+@media screen and (max-width: 768px) {
+    .genre-title {
+        font-size: 30px;
+    }
+
+    .genre-title-overlay {
+        font-size: .65rem;
+    }
+ }
+
+@media screen and (max-width: 540px) {
+    .genre-title {
+        font-size: 50px;
+    }
+
+    .genre-title-overlay {
+        font-size: 2rem;
+    }
+ }
+
+@media screen and (max-width: 425px) {
+    .genre-title {
+        font-size: 50px;
+    }
+
+    .genre-title-overlay {
+        font-size: 2rem;
+    }
+ }
+
+@media screen and (max-width: 320px) {
+    .genre-title-overlay {
+        font-size: 1rem;
+    }
+ }
