@@ -19,6 +19,7 @@ BUGBytes is also your go-to for game ratings. Share your gaming experiences and 
 ## Installation
 
 1. Navigate to your terminal or command prompt of choice.
+
 2. Establish a directory of your choice where you would like to house the project.
    > `cd path/to/your/directory `
 3. Once you are in your chosen directory, run the following command:
@@ -40,10 +41,13 @@ To easily install packages, run the following command in your terminal:
 |[React-Icons](https://react-icons.github.io/react-icons/) (4.10.1) | `npm install react-icons --save`
 |[HTML-Parser](https://www.npmjs.com/package/html-react-parser) (4.2.1) | `npm install html-react-parser --save`
 |[React](https://www.npmjs.com/package/react) (18.2.0) |`npm i react` |
-|[GraphQL](https://www.npmjs.com/package/graphql) (16.8.0) |`npm i graphql` |
+|[MDBootstrap](https://mdbootstrap.com/docs/react/getting-started/installation/) (6.2.0) |`npm i mdb-react-ui-kit`
 |[Express](https://www.npmjs.com/package/express) (4.17.2) |`npm i express` |
 |[Mongoose](https://www.npmjs.com/package/mongoose) (7.0.2) |`npm i mongoose` |
 |[React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction) (2.8.0) |`npm install react-bootstrap bootstrap` |
+|[Cloudinary](https://www.npmjs.com/package/cloudinary) () | `npm i cloudinary`
+|[bcrypt](https://www.npmjs.com/package/bcrypt) (2.4.3) | `npm 1 bcrypt`
+|[Apollo-Server](https://www.apollographql.com/docs/apollo-server/) (4.7.1) | `npm install @apollo/server graphql`
 
 **Additional Technologies**
 
@@ -51,8 +55,14 @@ To easily install packages, run the following command in your terminal:
 - [Heroku](https://www.heroku.com/): Cloud platform that enables us to deploy our web application.
 - [MongoDB](https://www.mongodb.com/docs/manual/installation/): Primary NoSQL database system to manage our data.
 - [Node](https://nodejs.org/en): JavaScript everywhere! Used to simplify development on both the front-end and back-end.
+- [Cloudinary](https://cloudinary.com/): Cloud-based platform for managing, optimizing, and delivering media assets such as images for applications.
 
 ## Screenshots
+
+![Main Page](client/src/assets/screenshots/main.JPG)
+![Login](client/src/assets/screenshots/login.JPG)
+![Register](client/src/assets/screenshots/Register.JPG)
+![Search Page](client/src/assets/screenshots/SearchedGames.JPG)
 
 ## Deployed Application
 
@@ -60,7 +70,7 @@ Heroku: [BUGBytes](https://bugbytes-eea33095845f.herokuapp.com/)
 
 ## References and Sources
 
-Our team utilized numerous resources to aid in the development of this application. Starting with working through documentation to understand our API key, components, and Heroku.
+Our team utilized numerous resources to aid in the development of this application. Each of these resources were key to understanding our direction and how to handle each step. Starting with working through documentation to understand our API key, MDBootstrap/React-Bootstrap components, and Heroku.
 <br>
 <br>
 Additional resources we utilized were sourced through MDN, Stackoverflow, W3Schools, YouTube tutorials (when working through setting up our bugs comment system).
