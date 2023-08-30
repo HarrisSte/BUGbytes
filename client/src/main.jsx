@@ -19,7 +19,7 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import SingleGame from './pages/SingleGame';
-import Search from './components/Search';
+import Results from './pages/Results/ResultsPage';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter(
 
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
-      <Route path='/search' element={<Search />} />
+      <Route path='/results' element={<Results />} />
       <Route path="/game/:gameId" element={<SingleGame />} />
 
       <Route
