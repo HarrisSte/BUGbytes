@@ -1,0 +1,123 @@
+.game-picture {
+    border-radius: 2rem;
+}
+
+.popular-game-title-overlay {
+    font-size: 20px;
+}
+
+.popular-games-title {
+    font-size: 4rem;
+}
+
+.carousel {
+    font-size: 2rem;
+}
+
+.carousel-captions {
+    font-size: 4rem;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+@media screen and (max-width: 1440px) {
+    .popular-game-title-overlay {
+        font-size: 1rem;
+    }
+
+    .popular-games-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .popular-game-title-overlay {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .carousel-captions {
+        font-size: 1.5rem;
+        bottom: 1rem;
+        left: -1rem;
+    }
+    
+    .popular-game-title-overlay {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        padding: 1rem;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .popular-game-title-overlay {
+        font-size: .6rem;
+    }
+
+    .popular-games-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .popular-games {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .popular-game-title-overlay {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .carousel-captions {
+        font-size: 1rem;
+        bottom: -1rem;
+        left: -1rem;
+    }
+
+    .popular-game-title-overlay {
+        font-size: 1.2rem;
+    }
+
+    .popular-games-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .popular-game-title-overlay {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .game-picture {
+        border-radius: .8rem;
+    }
+    
+    .carousel-captions {
+        font-size: .6rem;
+        border-radius: .1rem;
+    }
+
+    .popular-game-title-overlay {
+        font-size: .8rem;
+    }
+
+    .popular-games-title {
+        font-size: 1.5rem;
+    }
+}

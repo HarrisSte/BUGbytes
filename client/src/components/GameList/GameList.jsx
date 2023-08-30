@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 // import SelectedGenreGames from "./SelectedGenreGames";
-import SelectedGenreGames from "../components/SelectedGenreGames";
+import SelectedGenreGames from "../SelectedGenreGames";
 import Carousel from "react-bootstrap/Carousel";
+import './gamelist.css'
 
 const GameList = () => {
   const [gamesData, setGamesData] = useState([]);
@@ -26,31 +27,25 @@ const GameList = () => {
   const popularGames = gamesData.slice(0, 3);
 
   return (
-    <div>
-      <Carousel interval={2000}>
+    <div className='carousel'>
+      <Carousel interval={3000}>
         {gamesData.slice(0, 25).map((game) => (
           <Carousel.Item key={game.id}>
             <a href={`/game/${game.id}`}>
               <img
-                className="d-block w-100"
-                style={{
-                  borderRadius: "2rem",
-                }}
+                className="game-picture d-block w-100"
                 src={game.background_image}
                 alt={game.name}
               />
             </a>
             <Carousel.Caption>
-              <h3
+              <h3 className='carousel-captions'
                 style={{
                   position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
                   backgroundColor: "rgba(0, 0, 0, 0.7)",
                   color: "#fff",
                   padding: "5px 10px",
                   borderRadius: "5px",
-                  fontSize: "2rem",
                 }}
               >
                 {game.name}
@@ -62,17 +57,16 @@ const GameList = () => {
       </Carousel>
 
       <h3
-        className="mt-5 mb-5 text-center"
+        className="popular-games-title mt-5 mb-5 text-center"
         style={{
           textDecoration: "underline",
           fontFamily: "Montserrat, sans-serif",
-          fontSize: "46px",
           fontWeight: "900",
         }}
       >
         Most Popular Games
       </h3>
-      <div className="d-flex justify-content-between">
+      <div className="popular-games d-flex justify-content-between">
         {popularGames.map((game) => (
           <div
             key={game.id}
@@ -107,7 +101,7 @@ const GameList = () => {
                 }}
               />
               <div
-                className="game-title-overlay"
+                className="popular-game-title-overlay"
                 style={{
                   position: "absolute",
                   bottom: "20px",
@@ -116,7 +110,6 @@ const GameList = () => {
                   color: "#fff",
                   padding: "5px 10px",
                   borderRadius: "5px",
-                  fontSize: "14px",
                 }}
               >
                 {game.name}
@@ -126,7 +119,7 @@ const GameList = () => {
         ))}
       </div>
       <h3
-        className="mt-5 mb-5 text-center"
+        className="games-related mt-5 mb-5 text-center"
         style={{
           textDecoration: "underline",
           fontFamily: "Montserrat, sans-serif",
