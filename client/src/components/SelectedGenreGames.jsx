@@ -14,6 +14,7 @@ const SelectedGenreGames = ({ genreId }) => {
         console.log(err.message);
       });
   }, [genreId]);
+  
   return (
     <div>
       {genreGames.map((game) => (

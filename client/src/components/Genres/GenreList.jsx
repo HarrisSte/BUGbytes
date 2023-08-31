@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-// import SelectedGenreGames from "../components/SelectedGenreGames";
+// import SelectedGenreGames from "../SelectedGenreGames";
 import {Link} from "react-router-dom"
 import './genre.css'
 
 const GenreList = () => {
   const [genreData, setGenreData] = useState([]);
-    const [ setSelectedGenre ] = useState(null);
+    const [  setSelectedGenre] = useState(null);
 
   const handleGenreClick = (genreId) => {
       setSelectedGenre(genreId);
