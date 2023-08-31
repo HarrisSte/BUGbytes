@@ -61,17 +61,17 @@ function ProfilePage() {
       <div className='welcome text-center pt-2'>
         <h1>Welcome To Your Profile, {currentUser.firstName}!</h1>
       </div>
-      <Row>
-        <Col md={3}>
+      <Row className='profile-image-row d-flex flex-column align-items-center'>
+        <Col md={2.5}>
           <div>
             <Image
               src={currentUser.profileImageUrl ?? svenImage}
-              className='profile-image d-flex'
+              className='profile-image'
             />
           </div>
         </Col>
       </Row>
-      <ProfileImageUpload />
+      <ProfileImageUpload/>
       <Row>
         {playLaterCards.map((card, index) => (
           <Col key={index} xs={12} md={4} className='play-later-card'>

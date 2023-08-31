@@ -3,6 +3,10 @@
     --cloudinary-button-text: black;
 }
 
+.upload-button {
+    text-align: center;
+}
+
 .cloudinary-button {
     background-color: var(--cloudinary-button);
     color: var(--cloudinary-button-text);

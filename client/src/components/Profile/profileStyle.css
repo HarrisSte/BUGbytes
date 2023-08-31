@@ -1,7 +1,6 @@
 :root {
     --top-five-list-bg: #1b4332;
     --top-five-list-text: #9ef01a;
-    /* --card-title: #02c39a; */
 }
 
 .welcome {
@@ -13,7 +12,7 @@
     height: 200px;
     border-radius: 50%;
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;    
 }
 
 /* .top-five-list {
