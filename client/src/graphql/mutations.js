@@ -48,11 +48,11 @@ export const UPLOAD_FILE = gql`
 
 export const REPORT_BUG = gql`
   mutation reportBug(
-  $bugText: String!, 
+  $bugText: String! 
   $gameId: ID!
   ) {
     reportBug(
-    bugText: $bugText, 
+    bugText: $bugText 
     gameId: $gameId
     ) {
       _id
