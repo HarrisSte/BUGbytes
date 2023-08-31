@@ -1,10 +1,17 @@
+import React, { useState } from "react";
+import { useQuery, useMutation, gql } from "@apollo/client";
+import { QUERY_GAME } from "../../graphql/queries";
+import { REPORT_BUG } from "../../graphql/mutations";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
-
+import Button from 'react-bootstrap/Button';
+import Bug from "./Bug";
 import './SingleGame.css';
+
+
 
 const GameHeaderCard = ({ game }) => {
   return (
@@ -47,14 +54,46 @@ const GameDescriptionCard = ({ game }) => {
   );
 };
 
-const GamePage = (props) => {
+const GamePage = (props = { game: { bugs: []} }) => {
   const game = props.game;
+  const { loading, error, data } = useQuery(QUERY_GAME, {
+    variables: { gameId: game.id }
+  });
+  const [bugText, setBugText] = useState('');
+  const [bugs, setBugs] = useState(game.bugs || []);
+  const [reportBug] = useMutation(REPORT_BUG, {
+    onCompleted(data) {
+      setBugs([...bugs, data.reportBug]);
+    }
+  });
+
+  const handleReportBugSubmit = async (event) => {
+    const mutationResponse = await reportBug({
+      variables: {
+        bugText: bugText,
+        gameId: game.id
+      },
+    });
+  }
+
+  const handleChange = (event) => {
+    const { value } = event.target;
+    setBugText(value);
+  };
 
   return (
     <Container>
       <Row>
         <Col md={6}>
           <GameHeaderCard game={game} />
+          <h2>Bugs:</h2>
+          <input className='mb-2' type="text" defaultValue={"New bug"} onChange={handleChange}></input>
+          <Button variant="primary" onClick={handleReportBugSubmit}>Create Bug</Button>{' '}
+          {bugs.map((bug) => (
+            <div key={bug._id}>
+              <Bug key={bug._id} bug={bug} />
+            </div>
+          ))}
         </Col>
         <Col md={6}>
           <GameDescriptionCard game={game} />

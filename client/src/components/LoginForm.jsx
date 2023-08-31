@@ -25,8 +25,8 @@ export default function Login() {
           password: formState.password,
         },
       });
-      const { token, user } = mutationResponse.data.login;
-      loginUser(user, token);
+      const { token, currentUser } = mutationResponse.data.login;
+      loginUser(currentUser, token);
       navigate('/profile');
     } catch (e) {
       console.log(e);
