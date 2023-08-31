@@ -5,10 +5,12 @@
 
 .upload-button {
     text-align: center;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .cloudinary-button {
     background-color: var(--cloudinary-button);
     color: var(--cloudinary-button-text);
     font-weight: bolder;
+    font-size: 18px;
 }

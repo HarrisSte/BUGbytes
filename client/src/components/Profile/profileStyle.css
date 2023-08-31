@@ -48,6 +48,10 @@
     background-color: var(--top-five-list-bg);
 }
 
+.profile-card-text {
+    font-family: 'Varela Round', sans-serif;
+}
+
 @media (max-width: 768px) {
     .profile-image {
         margin-top: 1rem;
