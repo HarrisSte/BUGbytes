@@ -30,7 +30,7 @@ const UploadAndDisplayImage = () => {
   }
 
   return (
-    <div className="App">
+    <div className="upload-button">
       <button
         id="upload_widget"
         className="cloudinary-button"

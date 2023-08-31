@@ -5,6 +5,7 @@
     margin-bottom: 1rem;
     transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 1rem;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .results-card:hover {
@@ -23,7 +24,7 @@
     padding: 1rem;
 }
 
-.results-card .card-title {
+.results-card .results-card-title {
     font-size: 1.2rem;
     background-color: #5c415d;
     color: #fff;

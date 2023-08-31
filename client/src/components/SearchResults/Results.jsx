@@ -14,7 +14,7 @@ const ResultsCard = ({ game }) => {
       <Link to={gameLink}>
         <img src={game.background_image} alt='game' />
       </Link>
-      <div className='card-title'>{game.name}</div>
+      <div className='results-card-title'>{game.name}</div>
     </div>
   );
 };
