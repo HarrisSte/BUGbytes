@@ -14,15 +14,15 @@ export const QUERY_GAME = gql`
   query game($gameId: ID) {
     game(gameId: $gameId) {
       bugs {
-        _id
-        text
-        author
-        createdAt
+        _id,
+        text,
+        author,
+        createdAt,
         comments {
-          createdAt
-          commentBody
+          createdAt,
+          commentBody,
           author {
-            _id
+            _id,
             firstName
             lastName
             email

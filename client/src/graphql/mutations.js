@@ -68,10 +68,10 @@ export const ADD_COMMENT = gql`
     addComment(
     comment: $comment
     ) {
-      createdAt
-      commentBody
+      createdAt,
+      commentBody,
       author {
-        _id
+        _id,
         firstName
         lastName
         email
