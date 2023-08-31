@@ -1,0 +1,10 @@
+:root {
+    --cloudinary-button: #70e000;
+    --cloudinary-button-text: black;
+}
+
+.cloudinary-button {
+    background-color: var(--cloudinary-button);
+    color: var(--cloudinary-button-text);
+    font-weight: bolder;
+}

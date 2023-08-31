@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import ProfileImageUpload from '../ProfileImageUpload';
+import ProfileImageUpload from '../ProfileImageUpload/ProfileImageUpload';
 import { useCurrentUserContext } from "../../context/CurrentUser";
 
 import svenImage from '../../assets/sven.jpg';
@@ -53,14 +53,13 @@ function ProfilePage() {
       <div className='welcome text-center pt-2'>
           <h1>Welcome To Your Profile!</h1>
       </div>
-      <ProfileImageUpload />
       <Row>
         <Col md={3}>
           <div>
-            <Image src={currentUser.profileImageUrl ?? svenImage} className='profile-image' />
+            <Image src={currentUser.profileImageUrl ?? svenImage} className='profile-image d-flex' />
           </div>
         </Col>
-        <Col md={8} className='top-five-list'>
+        {/* <Col md={8} className='top-five-list'>
           <ListGroup as='ul'>
             <h1>My Top Five Games</h1>
             <ListGroup>
@@ -71,15 +70,16 @@ function ProfilePage() {
               <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
             </ListGroup>
           </ListGroup>
-        </Col>
+        </Col> */}
       </Row>
+      <ProfileImageUpload />
       <Row>
         {playLaterCards.map((card, index) => (
           <Col key={index} xs={12} md={4} className='play-later-card'>
             <Card>
               <Card.Img variant='top' src='holder.js/100px180' />
               <Card.Body>
-                <Card.Title>{card.title}</Card.Title>
+                <Card.Title bg='primary'>{card.title}</Card.Title>
                 <Card.Text>{card.text}</Card.Text>
                 <Button size='lg' variant='outline-danger'>
                   Check out the game!
