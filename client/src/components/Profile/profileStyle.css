@@ -31,11 +31,20 @@
     padding: 1rem;
 } */
 
+.profile-cards {
+    padding-top: 1rem;
+}
+
+.play-later-image {
+    max-height: 12rem;
+}
+
 .profile-card-title {
     background: rgb(0,255,34);
     background: linear-gradient(90deg, rgb(23, 184, 120) 0%, rgba(0,255,136,1) 50%, rgb(0, 247, 255) 100%);
     padding: .5rem;
     border-radius: .4rem;
+    text-align: center;
 }
 
 .play-later-card {
