@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import parse from 'html-react-parser';
 
-import './SingleGame.css';
+import './singlegame.css';
 
 const GameHeaderCard = ({ game }) => {
   return (

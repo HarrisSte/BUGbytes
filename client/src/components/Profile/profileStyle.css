@@ -12,7 +12,7 @@
     height: 200px;
     border-radius: 50%;
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;    
 }
 
 /* .top-five-list {
@@ -30,6 +30,13 @@
     border-radius: 1rem;
     padding: 1rem;
 } */
+
+.profile-card-title {
+    background: rgb(0,255,34);
+    background: linear-gradient(90deg, rgb(23, 184, 120) 0%, rgba(0,255,136,1) 50%, rgb(0, 247, 255) 100%);
+    padding: .5rem;
+    border-radius: .4rem;
+}
 
 .play-later-card {
     font-family: 'Poppins', sans-serif;
