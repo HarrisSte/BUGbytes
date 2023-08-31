@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
-// import SelectedGenreGames from "../SelectedGenreGames";
+import SelectedGenreGames from "../SelectedGenreGames";
 import {Link} from "react-router-dom"
 import './genre.css'
 
 const GenreList = () => {
   const [genreData, setGenreData] = useState([]);
-    const [  setSelectedGenre] = useState(null);
+    const [ selectedGenre, setSelectedGenre] = useState(null);
 
   const handleGenreClick = (genreId) => {
       setSelectedGenre(genreId);
-      window.history.pushState(null, null, `/genre/${genreId}`);
+      window.history.pushState(null, null, `/genres/${genreId}`);
   };
 
   useEffect(() => {
-    fetch("https://api.rawg.io/api/genres?key=bf22dc51e531456db8bc42a19dac9897")
+    fetch(`https://api.rawg.io/api/genres?key=bf22dc51e531456db8bc42a19dac9897`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
         setGenreData(data.results);
       })
       .catch((err) => {
@@ -50,7 +49,7 @@ const GenreList = () => {
             }}
             >
             <Link
-              href={`/genres/${genre.id}`}
+              href={`/${genre.id}`}
               className="btn btn-light"
               style={{
                 width: "100%",
@@ -86,7 +85,7 @@ const GenreList = () => {
           </div>
         ))}
       </div>
-      {/* {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />} */}
+      {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />}
     </div>
   );
 };

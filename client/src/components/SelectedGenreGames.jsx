@@ -7,7 +7,6 @@ const SelectedGenreGames = ({ genreId }) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
         setGenreGames(data.results);
       })
       .catch((err) => {

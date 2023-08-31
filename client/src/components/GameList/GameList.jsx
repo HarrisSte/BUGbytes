@@ -1,25 +1,17 @@
 import { useEffect, useState } from 'react';
-// import SelectedGenreGames from "./SelectedGenreGames";
-import SelectedGenreGames from "../SelectedGenreGames";
+// import SelectedGenreGames from "../SelectedGenreGames";
 import Carousel from 'react-bootstrap/Carousel';
 import './gamelist.css';
 
 const GameList = () => {
   const [gamesData, setGamesData] = useState([]);
-  const [selectedGenre] = useState(null);
-
-  // const handleGenreClick = (genreId) => {
-  //   setSelectedGenre(genreId);
-  // };
   
-
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=bf22dc51e531456db8bc42a19dac9897&genres?key=bf22dc51e531456db8bc42a19dac9897`
+      `https://api.rawg.io/api/games?key=bf22dc51e531456db8bc42a19dac9897`
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
         setGamesData(data.results);
       })
       .catch((err) => {
@@ -131,11 +123,10 @@ const GameList = () => {
           fontWeight: '900',
         }}
       >
-        {' '}
         Games Related To Selected Genre
       </h3>
       <div>
-        {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />}
+        {/* {SelectedGenreGames && <SelectedGenreGames genreId={selectedGenre} />} */}
       </div>
     </div>
   );
