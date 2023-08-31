@@ -45,7 +45,7 @@ To easily install packages, run the following command in your terminal:
 |[Express](https://www.npmjs.com/package/express) (4.17.2) |`npm i express` |
 |[Mongoose](https://www.npmjs.com/package/mongoose) (7.0.2) |`npm i mongoose` |
 |[React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction) (2.8.0) |`npm install react-bootstrap bootstrap` |
-|[Cloudinary](https://www.npmjs.com/package/cloudinary) () | `npm i cloudinary`
+|[Cloudinary](https://www.npmjs.com/package/cloudinary) (1.40.0) | `npm i cloudinary`
 |[bcrypt](https://www.npmjs.com/package/bcrypt) (2.4.3) | `npm 1 bcrypt`
 |[Apollo-Server](https://www.apollographql.com/docs/apollo-server/) (4.7.1) | `npm install @apollo/server graphql`
 
@@ -59,10 +59,20 @@ To easily install packages, run the following command in your terminal:
 
 ## Screenshots
 
+**Homepage**
 ![Main Page](client/src/assets/screenshots/main.JPG)
+
+**Login**
 ![Login](client/src/assets/screenshots/login.JPG)
+
+**Register**
 ![Register](client/src/assets/screenshots/Register.JPG)
+
+**Search Results**
 ![Search Page](client/src/assets/screenshots/SearchedGames.JPG)
+
+**Profile**
+![Profile](client/src/assets/screenshots/profile.JPG)
 
 ## Deployed Application
 
@@ -70,10 +80,10 @@ Heroku: [BUGBytes](https://bugbytes-eea33095845f.herokuapp.com/)
 
 ## References and Sources
 
-Our team utilized numerous resources to aid in the development of this application. Each of these resources were key to understanding our direction and how to handle each step. Starting with working through documentation to understand our API key, MDBootstrap/React-Bootstrap components, and Heroku.
+Our team utilized numerous resources to aid in the development of this application. Each of these resources were key to understanding our direction and how to handle each step. Starting with working through documentation to understand our API key (RAWG), Apollo Server, Cloudinary, React-Bootstrap components, Vite, and Heroku.
 <br>
 <br>
-Additional resources we utilized were sourced through MDN, Stackoverflow, W3Schools, YouTube tutorials (when working through setting up our bugs comment system).
+Reading through articles and developer forums were vital in reaching our goals. These materials were sourced through sites such as Medium, MDN, Stackoverflow, W3Schools, and viewing YouTube tutorials (when working through setting up our bugs comment system).
 <br>
 <br>
 We also garnered assistance from numerous tutoring sessions, office hours, and discussing our ideals and directions with our colleagues who were also able to assist us overcoming our obstacles.
@@ -84,10 +94,10 @@ We also garnered assistance from numerous tutoring sessions, office hours, and d
 
 ## Contact
 
-- Stephanie: [GitHub](https://github.com/HarrisSte) || [LinkedIn](https://www.linkedin.com/in/harrisste9/) || [Email](mailto:st3phanie.harris@gmail.com)
+- **Stephanie:** [GitHub](https://github.com/HarrisSte) | [LinkedIn](https://www.linkedin.com/in/harrisste9/) | [Email](mailto:st3phanie.harris@gmail.com)
   <br>
-- Mohamed: [GitHub](https://github.com/Prototype1309) || [LinkedIn](https://www.linkedin.com/in/mohamed-hourri-92326813b/) || [Email](simo.hourri@gmail.com)
+- **Mohamed:** [GitHub](https://github.com/Prototype1309) | [LinkedIn](https://www.linkedin.com/in/mohamed-hourri-92326813b/) | [Email](simo.hourri@gmail.com)
   <br>
-- Caitlin: [GitHub](https://github.com/caitlinramsey) || [LinkedIn](https://www.linkedin.com/in/caitlin-ramsey/) || [Email](caitlinramsey@outlook.com)
+- **Caitlin:** [GitHub](https://github.com/caitlinramsey) | [LinkedIn](https://www.linkedin.com/in/caitlin-ramsey/) | [Email](caitlinramsey@outlook.com)
   <br>
-- John: [GitHub](https://github.com/js131993) || [LinkedIn]() || [Email](john.sanders4444@gmail.com)
+- **John:** [GitHub](https://github.com/js131993) | [Email](john.sanders4444@gmail.com)
