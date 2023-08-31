@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useQuery, useMutation, gql } from "@apollo/client";
 import { ADD_COMMENT } from "../../graphql/mutations";
@@ -52,10 +53,12 @@ const Bug = ({ bug }) => {
         </Row>
 
         {comments.map((c, i) => (
-            <div key={i}>
+            // eslint-disable-next-line react/jsx-key
+            <div >
               <Comment key={i} comment={c} canDelete={currentUser._id == c.author._id} />
             </div>
-          ))}
+        ))}
+        
       </Card.Body>
     </Card>
   );

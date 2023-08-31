@@ -55,7 +55,7 @@ const typeDefs = `#graphql
     removeGame(gameId: ID!): User
     reportBug(bugText: String!, gameId: ID!): Bug
     removeBug(bugText: String!): Boolean
-    addComment(comment: CommentInput): Bug
+    addComment(comment: CommentInput): Comment
     removeComment(commentText: String!): User
     updateProfilePicture(file: String!): Boolean
   }

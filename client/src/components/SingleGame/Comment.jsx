@@ -1,5 +1,5 @@
-// import React from 'react';
-// import Container from 'react-bootstrap/Container';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -10,7 +10,8 @@ const Comment = ({ comment, canDelete }) => {
     console.log("candelete", canDelete);
   return (
     <Card className='game-header'>
-        <Card.Title>
+          <Card.Title>
+              <Container>
             <Row className='align-items-center'>
                 <Col xs={2}>
                     <Image src={comment.author.profileImageUrl} roundedCircle style={{ width: '100%' }}  />
@@ -18,7 +19,8 @@ const Comment = ({ comment, canDelete }) => {
                 <Col xs={10}>
                     {comment.author.email}
                 </Col>
-            </Row>
+                  </Row>
+                  </Container>
         </Card.Title>
         <Card.Body>
             {comment.commentBody}

@@ -90,7 +90,8 @@ const GamePage = (props = { game: { bugs: []} }) => {
           <input className='mb-2' type="text" defaultValue={"New bug"} onChange={handleChange}></input>
           <Button variant="primary" onClick={handleReportBugSubmit}>Create Bug</Button>{' '}
           {bugs.map((bug) => (
-            <div key={bug._id}>
+            // eslint-disable-next-line react/jsx-key
+            <div>
               <Bug key={bug._id} bug={bug} />
             </div>
           ))}

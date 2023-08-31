@@ -118,7 +118,9 @@ const resolvers = {
           { $push: { comments: newComment } },
           { new: true }
         ).populate("comments.author");
-        return bug;
+        
+         const addedComment = bug.comments[bug.comments.length - 1];
+         return addedComment;
       }
       throw new AuthenticationError("You need to be logged in!");
     },
