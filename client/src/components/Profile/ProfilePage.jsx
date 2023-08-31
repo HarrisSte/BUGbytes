@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 import ProfileImageUpload from '../ProfileImageUpload/ProfileImageUpload';
-import { useCurrentUserContext } from "../../context/CurrentUser";
+import { useCurrentUserContext } from '../../context/CurrentUser';
 
 import svenImage from '../../assets/sven.jpg';
 import './profileStyle.css';
 
 function ProfilePage() {
   const { currentUser } = useCurrentUserContext();
+  const [username, setUsername] = useState('');
+
+  // console.log(currentUser);
+
+  useEffect(() => {
+    if (currentUser.isAuthenticated) {
+      setUsername(currentUser.username);
+    }
+  }, [currentUser]);
 
   const [playLaterCards, setPlayLaterCards] = useState([
     {
@@ -51,26 +59,17 @@ function ProfilePage() {
   return (
     <Container>
       <div className='welcome text-center pt-2'>
-          <h1>Welcome To Your Profile!</h1>
+        <h1>Welcome To Your Profile, {currentUser.firstName}!</h1>
       </div>
       <Row>
         <Col md={3}>
           <div>
-            <Image src={currentUser.profileImageUrl ?? svenImage} className='profile-image d-flex' />
+            <Image
+              src={currentUser.profileImageUrl ?? svenImage}
+              className='profile-image d-flex'
+            />
           </div>
         </Col>
-        {/* <Col md={8} className='top-five-list'>
-          <ListGroup as='ul'>
-            <h1>My Top Five Games</h1>
-            <ListGroup>
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-              <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-            </ListGroup>
-          </ListGroup>
-        </Col> */}
       </Row>
       <ProfileImageUpload />
       <Row>
