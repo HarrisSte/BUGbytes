@@ -30,7 +30,6 @@ const GenreList = () => {
         className="genre-title mb-4 text-center"
         style={{
           textDecoration: "underline",
-          fontFamily: "Montserrat, sans-serif",
           fontWeight: "900",
 
         }}

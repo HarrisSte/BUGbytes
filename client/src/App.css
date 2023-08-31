@@ -7,7 +7,7 @@
 
 html,
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Varela Round', sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
+  font-family: 'Varela Round', sans-serif;
 }
 
 .search-input {

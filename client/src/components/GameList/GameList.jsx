@@ -60,7 +60,6 @@ const GameList = () => {
         className="popular-games-title mt-5 mb-5 text-center"
         style={{
           textDecoration: "underline",
-          fontFamily: "Montserrat, sans-serif",
           fontWeight: "900",
         }}
       >
@@ -122,7 +121,6 @@ const GameList = () => {
         className="games-related mt-5 mb-5 text-center"
         style={{
           textDecoration: "underline",
-          fontFamily: "Montserrat, sans-serif",
           fontSize: "46px",
           fontWeight: "900",
         }}
