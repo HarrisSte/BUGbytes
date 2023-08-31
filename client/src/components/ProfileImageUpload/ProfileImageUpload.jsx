@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useMutation, gql } from "@apollo/client";
-import { UPLOAD_FILE } from "../graphql/mutations";
+import { UPLOAD_FILE } from "../../graphql/mutations";
+import './profileimageupload.css'
 
 const UploadAndDisplayImage = () => {
   const [uploadFile, { data }] = useMutation(UPLOAD_FILE);
-  var myWidget = window.cloudinary.createUploadWidget(
+  var myWidget = window?.cloudinary?.createUploadWidget(
     {
       cloudName: "das4fknkp",
       uploadPreset: "zx0yxf3g",
@@ -30,13 +31,12 @@ const UploadAndDisplayImage = () => {
 
   return (
     <div className="App">
-      <h2>Add Profile Image:</h2>
       <button
         id="upload_widget"
         className="cloudinary-button"
         onClick={handleClick}
       >
-        Upload
+        Upload New Profile Picture 
       </button>
     </div>
   );
