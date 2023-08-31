@@ -1,5 +1,6 @@
 .game-picture {
     border-radius: 2rem;
+    max-height: 45rem;
 }
 
 .popular-game-title-overlay {
@@ -15,7 +16,7 @@
 }
 
 .carousel-captions {
-    font-size: 4rem;
+    font-size: 3rem;
     bottom: 3rem;
     left: 3rem;
 }

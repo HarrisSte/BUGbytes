@@ -3,11 +3,8 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import GameList from "../../components/GameList/GameList";
 import GenreList from "../../components/Genres/GenreList";
-// import SelectedGenreGames
-//  from "../components/SelectedGenreGames";
 import HomepageBackground from "../../assets/homepage-background.png";
 import './homepage.css'
 
@@ -27,14 +24,13 @@ const Homepage = () => {
       <div className='main-games'>
         <Container fluid>
           <Row>
-            <Col sm={2}>
-              {" "}
-              <GenreList />
-            </Col>
             <Col sm={8}>
               {" "}
               <GameList />
-              {/* {selectedGenre && <SelectedGenreGames genreId={selectedGenre} />} */}
+            </Col>
+            <Col sm={2}>
+              {" "}
+              <GenreList />
             </Col>
           </Row>
         </Container>
