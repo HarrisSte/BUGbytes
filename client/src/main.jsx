@@ -8,18 +8,19 @@ import {
 } from 'react-router-dom';
 import { CookiesProvider } from 'react-cookie';
 
-import './index.css'
+import './index.css';
 
 import { CurrentUserProvider } from './context';
 
-import App from "./App";
-import Error from "./pages/Error";
-import Homepage from "./pages/Homepage/Homepage";
-import Profile from "./pages/Profile";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import App from './App';
+import Error from './pages/Error';
+import Homepage from './pages/Homepage/Homepage';
+import Profile from './pages/Profile';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 import SingleGame from './pages/SingleGame';
 import Results from './pages/Results/ResultsPage';
+// import SelectedGenreGames from './components/SelectedGenreGames';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -28,10 +29,11 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />} errorElement={<Error />}>
       <Route index element={<Homepage />} />
 
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
+      <Route path='login' element={<Login />} />
+      <Route path='register' element={<Register />} />
       <Route path='/results' element={<Results />} />
-      <Route path="/game/:gameId" element={<SingleGame />} />
+      <Route path='/game/:gameId' element={<SingleGame />} />
+      {/* <Route path='/genre/:genreId' element={<SelectedGenreGames />} /> */}
 
       <Route
         path='profile'
