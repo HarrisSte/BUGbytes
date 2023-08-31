@@ -76,12 +76,14 @@ function ProfilePage() {
       <Row>
         {playLaterCards.map((card, index) => (
           <Col key={index} xs={12} md={4} className='play-later-card'>
-            <Card>
+            <Card
+            style={{ backgroundColor: '#343a40' }}
+            >
               <Card.Img variant='top' src='holder.js/100px180' />
               <Card.Body>
-                <Card.Title bg='primary'>{card.title}</Card.Title>
-                <Card.Text>{card.text}</Card.Text>
-                <Button size='lg' variant='outline-danger'>
+                <Card.Title className='profile-card-title'>{card.title}</Card.Title>
+                <Card.Text className='profile-card-text' style={{ color: 'white' }}>{card.text}</Card.Text>
+                <Button size='lg' variant='outline-success'>
                   Check out the game!
                 </Button>{' '}
               </Card.Body>
