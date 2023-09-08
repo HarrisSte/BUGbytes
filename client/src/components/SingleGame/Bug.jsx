@@ -55,7 +55,7 @@ const Bug = ({bug}) => {
         {bug && comments.map((c, i) => (
             // eslint-disable-next-line react/jsx-key
             <div >
-              <Comment key={i} comment={c} canDelete={currentUser._id == c.author._id} bugId={console.log(bug) && bug._id}/>
+              <Comment key={c.commentId} comment={c} canDelete={currentUser._id == c.author._id} bugId={bug._id}/>
             </div>
         ))}
         
