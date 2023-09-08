@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery, useMutation, gql } from "@apollo/client";
 import { QUERY_GAME } from "../../graphql/queries";
 import { REPORT_BUG } from "../../graphql/mutations";
@@ -67,6 +67,13 @@ const GamePage = (props = { game: { bugs: []} }) => {
     }
   });
 
+  useEffect(() => {
+    if (data && data.game && data.game.bugs) {
+      setBugs(data.game.bugs);
+    }
+  }, [data]);
+
+  
   const handleReportBugSubmit = async (event) => {
     const mutationResponse = await reportBug({
       variables: {

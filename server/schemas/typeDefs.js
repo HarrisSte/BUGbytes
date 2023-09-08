@@ -24,6 +24,7 @@ const typeDefs = `#graphql
   }
 
   type Comment {
+    commentId: ID
     commentBody: String
     author: User
     createdAt: String
@@ -56,7 +57,7 @@ const typeDefs = `#graphql
     reportBug(bugText: String!, gameId: ID!): Bug
     removeBug(bugText: String!): Boolean
     addComment(comment: CommentInput): Comment
-    removeComment(commentText: String!): User
+    removeComment(commentId: ID!, bugId: ID!): Bug
     updateProfilePicture(file: String!): Boolean
   }
 `;

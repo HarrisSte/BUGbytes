@@ -37,24 +37,14 @@ export const REGISTER_USER = gql`
 `;
 
 export const UPLOAD_FILE = gql`
-  mutation updateProfilePicture(
-  $file: String!
-  ) {
-    updateProfilePicture(
-    file: $file
-    )
+  mutation updateProfilePicture($file: String!) {
+    updateProfilePicture(file: $file)
   }
 `;
 
 export const REPORT_BUG = gql`
-  mutation reportBug(
-  $bugText: String! 
-  $gameId: ID!
-  ) {
-    reportBug(
-    bugText: $bugText 
-    gameId: $gameId
-    ) {
+  mutation reportBug($bugText: String!, $gameId: ID!) {
+    reportBug(bugText: $bugText, gameId: $gameId) {
       _id
       text
       author
@@ -65,17 +55,37 @@ export const REPORT_BUG = gql`
 
 export const ADD_COMMENT = gql`
   mutation addComment($comment: CommentInput) {
-    addComment(
-    comment: $comment
-    ) {
-      createdAt,
-      commentBody,
+    addComment(comment: $comment) {
+      createdAt
+      commentBody
       author {
-        _id,
+        _id
         firstName
         lastName
         email
         profileImageUrl
+      }
+    }
+  }
+`;
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($commentId: ID!, $bugId: ID!) {
+    removeComment(commentId: $commentId, bugId: $bugId) {
+      _id
+      text
+      author
+      createdAt
+      comments {
+        createdAt
+        commentBody
+        author {
+          _id
+          firstName
+          lastName
+          email
+          profileImageUrl
+        }
       }
     }
   }

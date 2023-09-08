@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 import { useCurrentUserContext } from "../../context/CurrentUser";
 import Comment from './Comment';
 
-const Bug = ({ bug }) => {
+const Bug = ({bug}) => {
   const { currentUser } = useCurrentUserContext();
   const [bugComment, setBugComment] = useState('');
   const [comments, setComments] = useState(bug.comments || []);
@@ -52,10 +52,10 @@ const Bug = ({ bug }) => {
           </Col>
         </Row>
 
-        {comments.map((c, i) => (
+        {bug && comments.map((c, i) => (
             // eslint-disable-next-line react/jsx-key
             <div >
-              <Comment key={i} comment={c} canDelete={currentUser._id == c.author._id} />
+              <Comment key={i} comment={c} canDelete={currentUser._id == c.author._id} bugId={console.log(bug) && bug._id}/>
             </div>
         ))}
         
@@ -63,5 +63,6 @@ const Bug = ({ bug }) => {
     </Card>
   );
 };
+
 
 export default Bug;

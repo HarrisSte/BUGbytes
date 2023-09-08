@@ -125,14 +125,14 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
 
-    removeComment: async (parent, { commentText }, context) => {
+    removeComment: async (parent, { commentId, bugId }, context) => {
       if (context.user) {
-        const comment = await Comment.findByIdAndUpdate(
-          context.user_id,
-          { $pull: { addComment: commentText } },
+        const bug = await Bug.findByIdAndUpdate(
+          bugId,
+          { $pull: { comments: { commentId } } },
           { new: true }
-        );
-        return comment;
+        ).populate("comments.author");
+        return bug;
       }
       throw new AuthenticationError("You need to be logged in!");
     },
