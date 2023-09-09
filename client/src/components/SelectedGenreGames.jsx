@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
+// import.meta.env.VITE_API_KEY;
 
-
+  // console.log(import.meta.env.VITE_API_KEY);
 
 const SelectedGenreGames = ({ genreId }) => {
-  const apiKey = import.meta.env.VITE_API_KEY;
+  // const apiKey = import.meta.env.VITE_API_KEY;
   const [genreGames, setGenreGames] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games/key=${apiKey}=${genreId}`
+      `https://api.rawg.io/api/games?key=bf22dc51e531456db8bc42a19dac9897&genres=${genreId}`
     )
       .then((res) => res.json())
       .then((data) => {
