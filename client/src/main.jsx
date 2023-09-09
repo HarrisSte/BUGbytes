@@ -20,7 +20,6 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import SingleGame from './pages/SingleGame';
 import Results from './pages/Results/ResultsPage';
-// import SelectedGenreGames from './components/SelectedGenreGames';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -33,7 +32,6 @@ const router = createBrowserRouter(
       <Route path='register' element={<Register />} />
       <Route path='/results' element={<Results />} />
       <Route path='/game/:gameId' element={<SingleGame />} />
-      {/* <Route path='/genre/:genreId' element={<SelectedGenreGames />} /> */}
 
       <Route
         path='profile'

@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
+// import.meta.env.VITE_API_KEY;
+
+  // console.log(import.meta.env.VITE_API_KEY);
+
 const SelectedGenreGames = ({ genreId }) => {
+  // const apiKey = import.meta.env.VITE_API_KEY;
   const [genreGames, setGenreGames] = useState([]);
   useEffect(() => {
     fetch(
