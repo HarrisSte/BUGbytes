@@ -34,7 +34,7 @@ To easily install packages, run the following command in your terminal:
 
 > `npm i` <br>
 
-**Below are the indiviudal packages required to run this application**
+**Below are the individual packages required to run this application**
 |Packages Required | Installation |
 |---------------------------------------------------------|-------------------|
 |[Vite](https://vitejs.dev/guide/) (4.4.5) | `npm i vite`
